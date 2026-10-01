@@ -404,7 +404,7 @@ export const Chhattisgarh3DWorld: React.FC<Props> = ({
       fireflies.geometry.attributes.position.needsUpdate = true;
 
       // Animate line dashes
-      routeMat.dashOffset = -elapsed * 0.8;
+      (routeMat as any).dashOffset = -elapsed * 0.8;
 
       renderer.render(scene, camera);
     };

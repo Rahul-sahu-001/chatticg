@@ -7,8 +7,7 @@ import {
   Sparkles,
   MapPin,
   Phone,
-  Mail,
-  Github
+  Mail
 } from 'lucide-react';
 
 export const Footer: React.FC = () => {

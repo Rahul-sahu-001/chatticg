@@ -96,7 +96,7 @@ export const DistrictExplorer: React.FC = () => {
                 <div className='p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2'>
                   <h4 className='font-mono text-xs uppercase text-[#E5A93C] font-semibold'>Mountain Ridges</h4>
                   <ul className='space-y-1 text-xs text-gray-300'>
-                    {currentDistrict.nature.mountains.map((m, i) => <li key={i}>• {m}</li>)}
+                    {(currentDistrict.nature.mountains || []).map((m: string, i: number) => <li key={i}>• {m}</li>)}
                   </ul>
                 </div>
                 <div className='p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2'>
@@ -130,7 +130,7 @@ export const DistrictExplorer: React.FC = () => {
                     <strong className='text-white'>Traditional Architecture:</strong> {currentDistrict.culture.architecture}
                   </p>
                   <p className='text-xs text-gray-300 font-light leading-relaxed'>
-                    <strong className='text-white'>Traditional Clothing:</strong> {currentDistrict.culture.clothing}
+                    <strong className='text-white'>Traditional Clothing:</strong> {currentDistrict.culture.clothing || 'Traditional tribal attire'}
                   </p>
                 </div>
                 <div className='p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3'>
