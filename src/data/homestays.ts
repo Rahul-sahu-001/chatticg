@@ -2,87 +2,123 @@ import { Homestay } from '../types';
 
 export const HOMESTAYS: Homestay[] = [
   {
-    id: 'thembang-bapu-homestay',
-    name: 'Bapu Community Heritage Homestay',
-    host: 'Dorjee & Tsering Khandu',
-    village: 'Thembang Fortified Village',
-    district: 'West Kameng',
-    community: 'Monpa',
-    roomType: 'Traditional Stone Room with Wooden Floor & Mountain Views',
-    pricePerNight: 2200,
-    rating: 4.9,
-    reviewsCount: 38,
+    id: 'bastar-dhurwa-eco-homestay',
+    name: 'Dhurwa Eco-Jungle Homestay',
+    host: 'Sukhdev & Jamuna Baghel',
+    village: 'Kotamsar Buffer, Jagdalpur',
+    district: 'Bastar',
+    community: 'Dhurwa Tribal Clan',
+    roomType: 'Traditional Thatched Earth Cottage with Modern Private Bath',
+    pricePerNight: 1650,
+    rating: 4.96,
+    reviewsCount: 78,
     images: [
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1518457607834-6e8d80c183c5?auto=format&fit=crop&w=1200&q=80'
     ],
-    badges: ['Community Owned', 'Local Food Included', 'Family Hosted', 'Cultural Experience', 'Local Guide Available'],
-    meals: ['Zan millet porridge with wild spinach', 'Steamed Monpa momos', 'Organic apple stew', 'Fresh butter tea (Suja)'],
-    experiences: ['Dzong history walk', 'Red panda tracking in community conserved forest', 'Weaving workshop'],
-    sustainability: ['100% solar powered lighting', 'Zero single-use plastic policy', 'Revenue shares into village school fund'],
-    coordinates: { lat: 27.3512, lng: 92.3831 }
+    badges: ['Community Verified', '100% Solar Powered', 'Organic Farm-to-Table', 'Forest Guides on Site'],
+    meals: ['Traditional Chila breakfast', 'Forest Amat with steamed rice', 'Campfire roasted tubers and Mahua tea'],
+    experiences: [
+      'Night walk to listen to forest owls and insects',
+      'Morning harvest in organic vegetable backyard',
+      'Cave trail to secret subterranean limestone pools'
+    ],
+    sustainability: [
+      '100% solar lighting and solar water heating',
+      'Natural terracotta tile cooling without air conditioners',
+      'All plastic-free filtered earthen pot spring water'
+    ],
+    coordinates: { lat: 18.91, lng: 81.87 },
+    verifiedBadge: true
   },
   {
-    id: 'tage-bamboo-homestay',
-    name: 'Tage Bamboo Retreat',
-    host: 'Tage & Kemo Kanno',
-    village: 'Hong Village, Ziro',
-    district: 'Lower Subansiri',
-    community: 'Apatani',
-    roomType: 'Elevated Bamboo Suite overlooking Terraced Paddy',
-    pricePerNight: 2400,
-    rating: 5.0,
-    reviewsCount: 52,
+    id: 'sirpur-heritage-vihara-homestay',
+    name: 'Sirpur Buddhist Heritage Retreat',
+    host: 'Anand & Sunita Shrivas',
+    village: 'Sirpur Village Ghats',
+    district: 'Mahasamund',
+    community: 'Rural Artisan Guild',
+    roomType: 'Heritage Courtyard Room overlooking Lotus Pond',
+    pricePerNight: 1450,
+    rating: 4.92,
+    reviewsCount: 64,
     images: [
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1498429089284-41f8cf3ffd39?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80'
     ],
-    badges: ['Community Owned', 'Local Food Included', 'Family Hosted', 'Cultural Experience'],
-    meals: ['Dung Po red rice in wild leaf', 'Pika Pila with smoked pork', 'Fresh garden greens', 'Warm Marua brew'],
-    experiences: ['Paddy bund walking tour', 'Apatani fish harvesting', 'Evening hearth folklore'],
-    sustainability: ['Spring water filtration on tap', 'Organic farm-to-table compost cycle', 'Built with 100% sustainable village bamboo'],
-    coordinates: { lat: 27.5348, lng: 93.8344 }
+    badges: ['Archaeology Partner', 'Riverfront', 'Cycle Rental Included'],
+    meals: ['Chhattisgarhi 7-Bhaji lunch', 'Fresh hot Fara', 'Mahanadi river water-filtered herbal chai'],
+    experiences: [
+      'Early sunrise cycle tour of Surang Tila temple ruins',
+      'Pottery wheel trial with village terracotta artisan',
+      'Sunset country boat cruise on Mahanadi'
+    ],
+    sustainability: [
+      'Rainwater harvesting system recharge pit',
+      'Zero single-use plastic policy',
+      'Local cycle transport provided free of charge'
+    ],
+    coordinates: { lat: 21.348, lng: 82.174 },
+    verifiedBadge: true
   },
   {
-    id: 'yargap-chu-homestay',
-    name: 'Yargap Chu Riverside Eco Lodge',
-    host: 'Norbu & Pema Memba',
-    village: 'Old Mechuka Village',
-    district: 'Shi-Yomi',
-    community: 'Memba',
-    roomType: 'Pine Timber Cabin with River Confluence Vistas',
-    pricePerNight: 2800,
-    rating: 4.8,
-    reviewsCount: 44,
+    id: 'mainpat-tibetan-pine-homestay',
+    name: 'Mainpat Pine Valley Tibetan Cottage',
+    host: 'Tenzin Norbu & Family',
+    village: 'Camp 1, Mainpat',
+    district: 'Surguja',
+    community: 'Tibetan Settlement Community',
+    roomType: 'Handcrafted Wooden Chalet with Mountain View Balcony',
+    pricePerNight: 1850,
+    rating: 4.94,
+    reviewsCount: 92,
     images: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80'
     ],
-    badges: ['Family Hosted', 'Local Food Included', 'Local Guide Available', 'Cultural Experience'],
-    meals: ['Yak cheese thukpa', 'Handmade Memba momos with wild chives', 'Suja tea with barley tsampa'],
-    experiences: ['Samden Yongcha sunrise trek', 'River fishing with local elders', 'Pony trek on high meadows'],
-    sustainability: ['Firewood collected only from fallen deadwood', 'Chemical-free septic system', 'Locally crafted pine furniture'],
-    coordinates: { lat: 28.5996, lng: 94.1332 }
+    badges: ['High Altitude', 'Fireplace Room', 'Tibetan Culinary Host'],
+    meals: ['Warm butter tea & Tsampa', 'Handmade vegetable momos', 'Spicy Thukpa broth with fresh farm herbs'],
+    experiences: [
+      'Morning prayer session at Dhakpo Shedrupling Monastery',
+      'Visit to Ulta Pani gravity anomaly and Jaljali bouncy land',
+      'Tibetan hand-knotted carpet weaving demonstration'
+    ],
+    sustainability: [
+      'Woodfire space heating using fallen pine cones',
+      'Organic cold-climate greenhouse farming',
+      'Composting waste management system'
+    ],
+    coordinates: { lat: 22.815, lng: 83.28 },
+    verifiedBadge: true
   },
   {
-    id: 'mishmi-cloud-homestay',
-    name: 'Inin Cloud Mist Stilt House',
-    host: 'Mepi Mihu',
-    village: 'Mipi Village, Anini',
-    district: 'Dibang Valley',
-    community: 'Idu Mishmi',
-    roomType: 'Traditional Stilted Longhouse Timber Room',
-    pricePerNight: 2100,
-    rating: 4.9,
-    reviewsCount: 29,
+    id: 'bhoramdeo-jungle-farmstay',
+    name: 'Bhoramdeo Maikal Hills Farmstay',
+    host: 'Babulal Sahu & Baiga Elders',
+    village: 'Chaura Village, Kawardha',
+    district: 'Kabirdham',
+    community: 'Baiga & Gond Forest Fringe',
+    roomType: 'Mud and Teak Rural Cottage with Verandah',
+    pricePerNight: 1550,
+    rating: 4.88,
+    reviewsCount: 56,
     images: [
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1609137144822-44676100c5c4?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80'
     ],
-    badges: ['Community Owned', 'Family Hosted', 'Local Guide Available'],
-    meals: ['Hearth-smoked pork with wild nettle broth', 'Millet wine (Yu)', 'Sticky rice dumplings'],
-    experiences: ['Seven Lakes expedition staging', 'Shamanic herb foraging walk', 'Mishmi diamond handloom weaving'],
-    sustainability: ['Rainwater harvesting reservoir', 'Zero single-use plastics', 'Employs village youth as high guides'],
-    coordinates: { lat: 28.7909, lng: 95.9048 }
+    badges: ['Baiga Medicinal Garden', 'Heritage Proximity', 'Cattle Farm'],
+    meals: ['Bafauri with spicy garlic chutney', 'Organic Kodo millet porridge', 'Fresh farm cow milk and jaggery'],
+    experiences: [
+      'Walk to 1,000-year-old Bhoramdeo stone temple at dawn',
+      'Baiga herbal medicinal plant trail in Maikal foothills',
+      'Bullock cart ride through sugarcane fields'
+    ],
+    sustainability: [
+      'Zero chemical farm-grown produce',
+      'Traditional lime-washed mud walls that breathe naturally',
+      'Direct revenue sharing with Baiga forest guides'
+    ],
+    coordinates: { lat: 22.12, lng: 81.16 },
+    verifiedBadge: true
   }
 ];

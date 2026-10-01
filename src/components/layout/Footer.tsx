@@ -1,5 +1,15 @@
 import React from 'react';
-import { ShieldCheck, HeartHandshake, Leaf, ArrowUpRight } from 'lucide-react';
+import {
+  Compass,
+  Heart,
+  ShieldCheck,
+  Award,
+  Sparkles,
+  MapPin,
+  Phone,
+  Mail,
+  Github
+} from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -8,88 +18,143 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className='bg-[#050E16] text-[#EEF3F0] pt-20 pb-12 border-t border-white/10 relative overflow-hidden'>
-      <div className='absolute bottom-0 right-0 w-96 h-96 bg-[#E5A93C]/5 rounded-full blur-3xl pointer-events-none' />
-      <div className='absolute top-0 left-0 w-96 h-96 bg-[#0A231C]/20 rounded-full blur-3xl pointer-events-none' />
+    <footer className='bg-[#040B10] text-[#EEF3F0] border-t border-white/10 pt-16 pb-12 relative overflow-hidden'>
+      {/* Background glow */}
+      <div className='absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-48 bg-[#144A3A]/25 blur-[120px] pointer-events-none' />
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-white/10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-white/10'>
+          {/* Col 1: Brand & SIH Context */}
           <div className='lg:col-span-2 space-y-4'>
             <div className='flex items-center gap-3'>
-              <div className='w-9 h-9 rounded-xl bg-gradient-to-br from-[#E5A93C] to-[#C2593F] flex items-center justify-center font-serif text-lg font-bold text-[#07131D]'>
-                A
+              <div className='w-10 h-10 rounded-2xl bg-gradient-to-br from-[#E5A93C] via-[#C2593F] to-[#0F3D30] flex items-center justify-center shadow-lg font-serif text-xl font-black text-[#07131D]'>
+                ध
               </div>
               <div>
-                <span className='font-display tracking-widest text-2xl font-bold text-white block'>
-                  ARUNYA
+                <span className='font-display tracking-wider text-xl font-extrabold text-white'>
+                  DHAROHAR<span className='text-[#E5A93C]'>CG</span>
                 </span>
-                <span className='font-mono text-[10px] tracking-[0.25em] text-[#E5A93C] block'>
-                  Beyond The Map
+                <span className='font-mono text-[9px] uppercase tracking-[0.2em] text-[#F3BA54] block leading-none font-semibold'>
+                  Smart Tourism Platform • Chhattisgarh
                 </span>
               </div>
             </div>
-            <p className='text-sm text-[#98A7A0] leading-relaxed max-w-sm'>
-              Dedicated to rural, hidden, and culturally rich destinations of Arunachal Pradesh. We promote responsible community-based tourism, keeping value directly in the hands of village homestay custodians and tribal guardians.
+
+            <p className='text-xs text-gray-400 font-light leading-relaxed max-w-sm'>
+              A state-of-the-art immersive tourism platform specifically designed for Chhattisgarh. Built for the Smart India Hackathon (Problem Statement ID: 26204, Theme: Travel & Tourism, Category: Software) by <strong>Team Kshitij</strong>.
             </p>
-            <div className='p-4 rounded-xl bg-white/5 border border-white/10 space-y-2 max-w-sm'>
-              <div className='flex items-center gap-2 text-xs font-semibold text-[#F3BA54]'>
-                <ShieldCheck className='w-4 h-4' />
-                <span>Official Verification Notice</span>
-              </div>
-              <p className='text-[11px] text-gray-400 leading-normal'>
-                Travel requirements, permits (ILP/PAP), and festival dates can change. Always verify current state road and border advisories before traveling.
-              </p>
+
+            <div className='pt-2 flex items-center gap-3 text-xs font-mono text-gray-400'>
+              <span className='px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400'>
+                ● 100% Offline Demo Ready
+              </span>
+              <span className='px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[#F3BA54]'>
+                Team Kshitij
+              </span>
             </div>
           </div>
 
-          <div>
-            <h4 className='font-mono text-xs uppercase tracking-widest text-[#E5A93C] mb-4 font-semibold'>
-              EXPLORE
+          {/* Col 2: Navigation Links */}
+          <div className='space-y-3'>
+            <h4 className='font-mono text-xs uppercase tracking-wider text-[#E5A93C] font-bold'>
+              Platform Corridors
             </h4>
-            <ul className='space-y-2.5 text-xs text-gray-300'>
-              <li><button onClick={() => scrollTo('interactive-map')} className='hover:text-white transition-colors'>Artistic Topographic Map</button></li>
-              <li><button onClick={() => scrollTo('beyond-the-map')} className='hover:text-white transition-colors'>Beyond The Map Carousel</button></li>
-              <li><button onClick={() => scrollTo('districts-explorer')} className='hover:text-white transition-colors'>District by District</button></li>
-              <li><button onClick={() => scrollTo('festival-calendar')} className='hover:text-white transition-colors'>12-Month Festival Calendar</button></li>
-              <li><button onClick={() => scrollTo('trails-adventure')} className='hover:text-white transition-colors'>High Altitude Trails</button></li>
+            <ul className='space-y-2 text-xs font-mono text-gray-300'>
+              <li>
+                <button onClick={() => scrollTo('destinations')} className='hover:text-white transition-colors cursor-pointer'>
+                  Destination Explorer
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('ai-planner')} className='hover:text-white transition-colors cursor-pointer'>
+                  AI Travel Curator
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('tourism-load')} className='hover:text-white transition-colors cursor-pointer'>
+                  Smart Tourism Load
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('dharohar-pass')} className='hover:text-white transition-colors cursor-pointer'>
+                  Digital Dharohar Pass
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('experiences')} className='hover:text-white transition-colors cursor-pointer'>
+                  Community Experiences
+                </button>
+              </li>
             </ul>
           </div>
 
-          <div>
-            <h4 className='font-mono text-xs uppercase tracking-widest text-[#E5A93C] mb-4 font-semibold'>
-              EXPERIENCE & PLAN
+          {/* Col 3: Artisan & Culture */}
+          <div className='space-y-3'>
+            <h4 className='font-mono text-xs uppercase tracking-wider text-[#F3BA54] font-bold'>
+              Living Heritage
             </h4>
-            <ul className='space-y-2.5 text-xs text-gray-300'>
-              <li><button onClick={() => scrollTo('stories-archive')} className='hover:text-white transition-colors'>Mountain Audio Stories</button></li>
-              <li><button onClick={() => scrollTo('meet-the-locals')} className='hover:text-white transition-colors'>Meet the Village Custodians</button></li>
-              <li><button onClick={() => scrollTo('taste-arunachal')} className='hover:text-white transition-colors'>Taste Arunachal Food Lore</button></li>
-              <li><button onClick={() => scrollTo('mountain-artisans')} className='hover:text-white transition-colors'>Made in the Mountains Crafts</button></li>
-              <li><button onClick={() => scrollTo('ai-planner')} className='hover:text-white transition-colors text-[#F3BA54] font-medium'>AI Bespoke Trip Planner</button></li>
-              <li><button onClick={() => scrollTo('permit-info')} className='hover:text-white transition-colors'>ILP / PAP Permit Guidelines</button></li>
+            <ul className='space-y-2 text-xs font-mono text-gray-300'>
+              <li>
+                <button onClick={() => scrollTo('marketplace')} className='hover:text-white transition-colors cursor-pointer'>
+                  Dokra & Handicrafts
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('ar-vr')} className='hover:text-white transition-colors cursor-pointer'>
+                  360° Virtual Tours
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('travel-booking')} className='hover:text-white transition-colors cursor-pointer'>
+                  Homestays & Green Cabs
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('impact-meter')} className='hover:text-white transition-colors cursor-pointer'>
+                  Local Impact Meter
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('community')} className='hover:text-white transition-colors cursor-pointer'>
+                  #DiscoverDharoharCG
+                </button>
+              </li>
             </ul>
           </div>
 
-          <div>
-            <h4 className='font-mono text-xs uppercase tracking-widest text-[#E5A93C] mb-4 font-semibold'>
-              COMMUNITY & ETHICS
+          {/* Col 4: State & Governance */}
+          <div className='space-y-3'>
+            <h4 className='font-mono text-xs uppercase tracking-wider text-emerald-400 font-bold'>
+              Governance & SOS
             </h4>
-            <ul className='space-y-2.5 text-xs text-gray-300'>
-              <li><button onClick={() => scrollTo('impact-dashboard')} className='hover:text-white transition-colors'>Economic Retention Dashboard</button></li>
-              <li><button onClick={() => scrollTo('responsible-travel')} className='hover:text-white transition-colors'>8 Mountain Ethics Principles</button></li>
-              <li><button onClick={() => scrollTo('offline-pack')} className='hover:text-white transition-colors'>Offline Mountain Pack</button></li>
-              <li><button onClick={() => scrollTo('local-phrases')} className='hover:text-white transition-colors'>Local Tribal Phrasebook</button></li>
-              <li><a href='https://arunachalilp.com' target='_blank' rel='noopener noreferrer' className='hover:text-white transition-colors inline-flex items-center gap-1 text-[#E5A93C]'>Official eILP Portal <ArrowUpRight className='w-3 h-3' /></a></li>
+            <ul className='space-y-2 text-xs font-mono text-gray-300'>
+              <li>
+                <button onClick={() => scrollTo('dashboards')} className='hover:text-white transition-colors cursor-pointer'>
+                  State Analytics Portal
+                </button>
+              </li>
+              <li>
+                <span className='text-gray-400 block'>Tourist Police: 112 / +91-771-4224600</span>
+              </li>
+              <li>
+                <span className='text-gray-400 block'>Kanger Ranger Outpost: 24x7</span>
+              </li>
+              <li>
+                <span className='text-gray-400 block'>Paryatan Bhawan, Raipur</span>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className='pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400'>
-          <div className='flex items-center gap-4'>
-            <span className='flex items-center gap-1.5 text-[#E8DCC9]'><Leaf className='w-3.5 h-3.5 text-emerald-400' /> 100% Community-Based</span>
-            <span className='flex items-center gap-1.5 text-[#E8DCC9]'><HeartHandshake className='w-3.5 h-3.5 text-[#C2593F]' /> Direct Host Compensation</span>
-          </div>
-          <div className='font-mono text-[11px] text-gray-400'>
-            © 2026 ARUNYA Platform. Dedicated to the indigenous cultural guardianship of Arunachal Pradesh.
+        {/* Bottom Disclaimer & Copyright */}
+        <div className='pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-500'>
+          <p>
+            © 2026 DHAROHARCG — Smart Tourism & Cultural Heritage Platform for Chhattisgarh. All Rights Reserved.
+          </p>
+          <div className='flex items-center gap-4 text-[11px]'>
+            <span>Problem Statement ID: 26204</span>
+            <span>•</span>
+            <span>Team Kshitij</span>
           </div>
         </div>
       </div>

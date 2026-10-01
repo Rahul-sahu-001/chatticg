@@ -2,332 +2,604 @@ import { Destination } from '../types';
 
 export const DESTINATIONS: Destination[] = [
   {
-    id: 'mechuka',
-    name: 'Mechuka (Menchukha)',
-    nativeName: 'Medicinal Water Valley (Memba)',
-    district: 'Shi-Yomi',
-    altitude: '6,000 ft (1,829 m)',
-    coordinates: { lat: 28.5996, lng: 94.1332, mapX: 47, mapY: 28 },
-    community: 'Memba, Ramo, Pai-Libo',
-    description: 'A mystical high-altitude bowl ringed by snow-dusted ridges, wild horses grazing along the meandering Yargap Chu river, and the 400-year-old Samden Yongcha Monastery standing watch on a solitary hilltop.',
-    whySpecial: 'Often described as the untouched Shangri-La of the Eastern Himalayas. Preserves an ancient Buddhist Tibetan-influenced pastoral life interwoven with deep animist forest reverence.',
-    bestTime: 'October to April (Crisp mountain air & clear skies; light snow in Dec-Jan)',
+    id: 'chitrakote-falls',
+    name: 'Chitrakote Waterfalls',
+    nativeName: 'चित्रकूट जलप्रपात (The Niagara of India)',
+    district: 'Bastar',
+    region: 'Bastar & South',
+    altitude: '1,820 ft (555 m)',
+    coordinates: { lat: 19.2015, lng: 81.7108, mapX: 48, mapY: 78 },
+    community: 'Maria & Muria Gond, Halba',
+    description: 'India’s widest waterfall, spanning nearly 300 meters across a horseshoe-shaped gorge on the sacred Indravati River. During monsoons, it roars with wild ochre power; in winter and spring, it transforms into crystalline emerald cascades.',
+    whySpecial: 'Often crowned the "Niagara of India". Deeply revered by local Bastar tribes, surrounded by dense sal forests and sacred groves where indigenous fishermen navigate traditional country boats in the mist.',
+    bestTime: 'July to March (Peak roar in Aug-Oct; clear turquoise pools in Nov-Feb)',
     howToReach: {
-      gateway: 'Dibrugarh / Pasighat',
-      roadTransit: 'Pasighat or Aalo to Mechuka via shared Tata Sumo (approx. 9-11 hours through dramatic river canyons)',
-      nearestAir: 'Pasighat Airport (210 km) or Hollongi/Dibrugarh (380 km)',
-      nearestRail: 'Silapathar / Murkeongselek (Assam border)'
+      gateway: 'Jagdalpur (38 km) / Raipur (295 km)',
+      roadTransit: 'Scenic 45-min highway drive from Jagdalpur through sal-dappled Bastar plateau; state buses and green electric cabs available.',
+      nearestAir: 'Jagdalpur Airport (JGB - 42 km) or Raipur Swami Vivekananda Airport (RPR - 305 km)',
+      nearestRail: 'Jagdalpur Railway Station (JDB - 38 km)'
     },
+    tourismLoad: 'MODERATE',
+    currentVisitors: 420,
+    capacityLimit: 850,
+    crowdTrend: [15, 22, 45, 78, 85, 60, 40, 20],
+    recommendedTime: 'Early morning (06:30 - 09:30 AM) or Golden Sunset (04:30 - 06:15 PM)',
+    alternativeDestinations: ['tamda-ghumar', 'mendri-ghumar', 'tirathgarh-falls'],
     nearbyExperiences: [
-      'Hike to Samden Yongcha Monastery',
-      'Walk across traditional suspension bridges over Yargap Chu',
-      'Trek to Menchukha Holy Cave (Guru Padmasambhava meditation sanctuary)',
-      'Evening tea and butter lamps with Memba families'
+      'Indravati river boat ride to the splash zone with local Gond boatmen',
+      'Sunset photography over the horseshoe canyon rim',
+      'Taste Mahua blossom cooler at the eco-kiosk'
     ],
-    festivals: ['Losar (Tibetan New Year)', 'Badha (Harvest Celebration)'],
-    localFood: ['Momo with wild yak chhurpi', 'Thukpa', 'Zan millet porridge', 'Salt butter tea (Suja)'],
-    homestaysCount: 14,
-    approximateBudget: '₹2,200 - ₹3,800 / day (including family meals)',
-    difficulty: 'Moderate',
-    tags: ['High Valley', 'Monastery', 'Riverside', 'Memba Heritage', 'Pristine Nature'],
+    festivals: ['Bastar Dussehra', 'Chitrakote Mahotsav (February)'],
+    localFood: ['Chila with spicy tomato-garlic chutney', 'Fara steamed dumplings', 'Pehj corn broth'],
+    homestaysCount: 8,
+    approximateBudget: '₹1,800 - ₹3,200 / day',
+    localImpactRatio: 0.89,
+    difficulty: 'Easy',
+    tags: ['Waterfall', 'Niagara of India', 'Indravati', 'Bastar', 'Scenic Gorge'],
     images: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80'
     ],
     responsibleGuidelines: [
-      'Always walk clockwise around chortens and prayer walls (Mani stones).',
-      'Ask heartfelt permission before taking portraits of village elders.',
-      'Refill water from boiled spring filters rather than buying plastic bottles.',
-      'Dress modestly when entering monastic sanctuaries.'
+      'Never cross safety barriers onto slick gorge rocks during high flow.',
+      'Single-use plastic bottles are strictly prohibited along the gorge promenade.',
+      'Purchase handicrafts directly from the Tribal Cooperative society on the upper ridge.'
     ],
-    category: 'village'
+    category: 'waterfalls',
+    verifiedBadge: true,
+    rating: 4.9,
+    reviewsCount: 384
   },
   {
-    id: 'anini',
-    name: 'Anini (Dibang Valley)',
-    nativeName: 'Inin (Valley of the Clouds)',
-    district: 'Dibang Valley',
-    altitude: '6,450 ft (1,968 m)',
-    coordinates: { lat: 28.7909, lng: 95.9048, mapX: 74, mapY: 26 },
-    community: 'Idu Mishmi',
-    description: 'Arunachal’s least populated, wildest highland frontier where emerald ridges rise like castle walls into shifting clouds. The homeland of the Idu Mishmi, whose intricate animist cosmos considers tigers their blood brothers.',
-    whySpecial: 'Gateway to the Seven Lakes Alpine Trek and pristine rainforest wilderness where hunting taboos protect gibbons, clouded leopards, and sacred Mishmi takins without state intervention.',
-    bestTime: 'October to May (Monsoon June-Sept brings heavy landslides)',
+    id: 'tirathgarh-falls',
+    name: 'Tirathgarh Falls',
+    nativeName: 'तीरथगढ़ जलप्रपात (The Milky Cascades)',
+    district: 'Bastar',
+    region: 'Bastar & South',
+    altitude: '1,960 ft (598 m)',
+    coordinates: { lat: 18.9135, lng: 81.8647, mapX: 52, mapY: 84 },
+    community: 'Dhurwa & Gond',
+    description: 'A breathtaking 300-foot multi-tiered cascade inside Kanger Valley National Park on the Kanger River tributary (Mungabahar). The water breaks into countless white rivulets resembling bridal silk over stepped sandstone ledges.',
+    whySpecial: 'Houses an ancient Shiva-Parvati cliffside shrine dating back centuries. The cool microclimate sustains rare ferns, medicinal forest trees, and vibrant butterflies.',
+    bestTime: 'September to March',
     howToReach: {
-      gateway: 'Dibrugarh / Tinsukia',
-      roadTransit: 'Dibrugarh to Roing via Dhola-Sadiya Bridge, then ascend through Mayodia Pass to Anini (approx. 8-10 hours)',
-      nearestAir: 'Dibrugarh Mohanbari Airport (280 km)',
-      nearestRail: 'Tinsukia Railway Junction (260 km)'
+      gateway: 'Jagdalpur (35 km)',
+      roadTransit: 'Well-paved national park road branching off NH-30 through virgin teak and bamboo groves.',
+      nearestAir: 'Jagdalpur Airport (36 km)',
+      nearestRail: 'Jagdalpur (35 km)'
     },
+    tourismLoad: 'LOW',
+    currentVisitors: 190,
+    capacityLimit: 600,
+    crowdTrend: [10, 20, 35, 45, 50, 35, 25, 10],
+    recommendedTime: 'Morning 08:00 AM - 11:30 AM',
+    alternativeDestinations: ['chitrakote-falls', 'kanger-valley'],
     nearbyExperiences: [
-      'Expedition into the glacial Seven Lakes highland basin',
-      'Sit with Igu shamans during evening chanting rituals',
-      'Explore traditional stilted timber and cane Mishmi longhouses',
-      'Birding in the temperate cloud canopy'
+      'Descent down the stepped trail to the lower natural splash pool',
+      'Forest birdwatching for the Indian Paradise Flycatcher',
+      'Visit the ancient stone shrine under the banyan canopy'
     ],
-    festivals: ['Reh Festival (February 1-3)', 'Ke-Meh-Ha (Autumn harvest celebration)'],
-    localFood: ['Smoked pork with wild bamboo shoot', 'Apong millet brew', 'Wild nettle soup', 'Sticky rice in banana leaves'],
-    homestaysCount: 8,
-    approximateBudget: '₹2,500 - ₹4,200 / day',
-    difficulty: 'Demanding',
-    tags: ['Wilderness', 'Idu Mishmi', 'Alpine Lakes', 'Sacred Animism', 'Cloud Forest'],
-    images: [
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?auto=format&fit=crop&w=1200&q=80'
-    ],
-    responsibleGuidelines: [
-      'Never kill or disturb tigers or hoolock gibbons; they hold sacred sibling status in Idu mythology.',
-      'Pay local guides directly at community-agreed fair wages.',
-      'Pack out all non-biodegradable waste; no municipal waste recycling exists in high valleys.'
-    ],
-    category: 'village'
-  },
-  {
-    id: 'dong-walong',
-    name: 'Dong & Walong (Edge of Dawn)',
-    nativeName: 'First Light of India',
-    district: 'Anjaw',
-    altitude: '4,070 ft (1,240 m) / Dong peak 8,700 ft',
-    coordinates: { lat: 28.1887, lng: 97.0422, mapX: 92, mapY: 42 },
-    community: 'Meyor, Digaru Mishmi',
-    description: 'Tucked into India’s easternmost tri-junction along the rushing emerald Lohit river, Dong Valley greets the nation’s very first sunrise rays around 4:15 AM. Surrounded by dry pine-clad cliffs and peaceful border villages.',
-    whySpecial: 'The spiritual experience of hiking before dawn through dewy alpine meadows to watch the first golden dawn light break across the eastern hemisphere. Walong also holds poignant 1962 memorial history and natural hot springs.',
-    bestTime: 'October to April (Clear crisp dawns with zero cloud clutter)',
-    howToReach: {
-      gateway: 'Dibrugarh / Tinsukia',
-      roadTransit: 'Tinsukia to Tezu, then follow the Lohit River gorge via Hayuliang to Walong (approx. 9-11 hours)',
-      nearestAir: 'Dibrugarh (310 km) or Tezu Airport',
-      nearestRail: 'Tinsukia (285 km)'
-    },
-    nearbyExperiences: [
-      'Pre-dawn 3 AM trek to Dong Peak for the First Light ceremony',
-      'Soak in the natural mineral sulfur hot springs of Walong',
-      'Visit Tilam & Kaho—India’s easternmost frontier villages',
-      'Hear Meyor village folk songs around open pinewood hearths'
-    ],
-    festivals: ['Tamladu (February 15)', 'Meyor Tsok (Harvest New Year)'],
-    localFood: ['Chhang fermented millet drink', 'Smoked mountain river fish', 'Wild honey with corn pancakes'],
-    homestaysCount: 6,
-    approximateBudget: '₹2,000 - ₹3,200 / day',
+    festivals: ['Maha Shivaratri Fair', 'Goncha Festival'],
+    localFood: ['Bafauri steamed dumplings', 'Forest wild berry cooler', 'Angakar Roti'],
+    homestaysCount: 5,
+    approximateBudget: '₹1,500 - ₹2,800 / day',
+    localImpactRatio: 0.92,
     difficulty: 'Moderate',
-    tags: ['First Sunrise', 'Meyor Culture', 'Pine Forests', 'Hot Springs', 'Frontier Border'],
+    tags: ['Waterfalls', 'Kanger Valley', 'Multi-Tier', 'Ancient Shrine', 'Biodiversity'],
     images: [
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1518457607834-6e8d80c183c5?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80'
     ],
     responsibleGuidelines: [
-      'Strictly avoid photographing sensitive military or international border installations.',
-      'Maintain total silence during early morning village trails so as not to disrupt resting households.',
-      'Support local Meyor weaving cooperatives by acquiring authentic handloom shawls directly.'
+      'Do not litter wrappers or bottles in the national park buffer zone.',
+      'Wear sturdy walking shoes for the 200+ stone steps down to the base.',
+      'Support the community-run forest canteen managed by the Van Suraksha Samiti.'
     ],
-    category: 'village'
+    category: 'waterfalls',
+    verifiedBadge: true,
+    rating: 4.8,
+    reviewsCount: 290
   },
   {
-    id: 'hong-village-ziro',
-    name: 'Hong Village & Ziro Valley',
-    nativeName: 'Hong Mudang Tage',
-    district: 'Lower Subansiri',
-    altitude: '5,540 ft (1,688 m)',
-    coordinates: { lat: 27.5348, lng: 93.8344, mapX: 42, mapY: 52 },
-    community: 'Apatani',
-    description: 'One of the largest traditional villages in Asia, celebrated for its UNESCO-nominated landscape: intricate fish-cum-paddy wetland cultivation, towering bamboo groves (Bije), pine groves, and wood-and-bamboo stilt architecture.',
-    whySpecial: 'The living culture of the Apatani: revered elder women with traditional facial tattoos (Tikyii) and cane nose plugs (Yaping Hullo), practicing sacred animist Donyi-Polo faith and peerless zero-waste communal forestry.',
-    bestTime: 'March to November (March for Myoko festival; July for lush green paddy & Dree; Oct for golden harvest)',
+    id: 'kanger-valley',
+    name: 'Kanger Valley National Park & Kutumsar Caves',
+    nativeName: 'कांगेर घाटी राष्ट्रीय उद्यान एवं कोटमसर गुफाएँ',
+    district: 'Bastar',
+    region: 'Bastar & South',
+    altitude: '1,110 - 2,820 ft',
+    coordinates: { lat: 18.892, lng: 81.938, mapX: 56, mapY: 86 },
+    community: 'Dhurwa, Dorla',
+    description: 'One of India’s most pristine biodiversity hotspots, sheltering the state bird (Bastar Hill Myna), leopards, wild buffaloes, and surreal subterranean limestone cave systems with stalactites and stalagmites.',
+    whySpecial: 'Kutumsar Cave extends 330 meters into total pitch darkness where blind cave-dwelling fish (*Nemacheilus evezardi*) have adapted over millennia. Forest custodians guide travelers using torchlight.',
+    bestTime: 'November to June (Caves remain closed during monsoons for safety)',
     howToReach: {
-      gateway: 'Guwahati / Tezpur / Lilabari',
-      roadTransit: 'Guwahati or Tezpur via Kimin/Potin to Ziro (approx. 8 hours) or train to Naharlagun then 3.5 hrs drive',
-      nearestAir: 'Lilabari (120 km) or Hollongi/Itanagar (115 km)',
-      nearestRail: 'Naharlagun (100 km)'
+      gateway: 'Jagdalpur (30 km)',
+      roadTransit: 'Forest gate permits issued at Kotamsar barrier; 4x4 gypsies and certified tribal naturalist guides required.',
+      nearestAir: 'Jagdalpur Airport (32 km)',
+      nearestRail: 'Jagdalpur (30 km)'
     },
+    tourismLoad: 'MODERATE',
+    currentVisitors: 310,
+    capacityLimit: 500,
+    crowdTrend: [5, 15, 55, 75, 70, 50, 20, 5],
+    recommendedTime: 'Morning slot 09:00 AM - 12:00 PM (Batch entry inside cave)',
+    alternativeDestinations: ['dandak-cave', 'kailash-caves', 'tirathgarh-falls'],
     nearbyExperiences: [
-      'Guided walk through Hong & Hari village bamboo corridors',
-      'Learn the ancient Apatani wet-rice & fingerling fish farming technique',
-      'Trek into the biodiversity-rich Talley Valley Wildlife Sanctuary',
-      'Participate in traditional bamboo basket weaving workshops'
+      'Subterranean spelunking through stalactite halls with Dhurwa tribal guides',
+      'Listening to the Bastar Hill Myna mimicry calls along the Kanger river trail',
+      'Nature walk through subterranean Dandak and Kailash cave networks'
     ],
-    festivals: ['Myoko (March 20-30 - Month-long friendship & spring renewal)', 'Dree (July 5 - Agricultural blessing)'],
-    localFood: ['Pika Pila (fermented bamboo shoot pickle with pork fat)', 'Pike Pila with smoked beef', 'Khar salty ash extract', 'Traditional Marua rice beer'],
-    homestaysCount: 22,
-    approximateBudget: '₹1,800 - ₹3,000 / day',
-    difficulty: 'Easy',
-    tags: ['Apatani Culture', 'Bamboo Architecture', 'UNESCO Valley', 'Donyi-Polo', 'Agro-Ecology'],
+    festivals: ['Van Mahotsav', 'Bastar Dussehra Forest Offering'],
+    localFood: ['Amat bamboo shoot stew', 'Dubki Kadi', 'Woodfire-baked Sal leaf roti'],
+    homestaysCount: 6,
+    approximateBudget: '₹2,200 - ₹3,600 / day',
+    localImpactRatio: 0.94,
+    difficulty: 'Moderate',
+    tags: ['National Park', 'Limestone Caves', 'Blind Fish', 'Wildlife', 'Eco-Tourism'],
     images: [
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1498429089284-41f8cf3ffd39?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
     ],
     responsibleGuidelines: [
-      'Never point cameras at tattooed Apatani elders without gentle consent and respectful conversation.',
-      'Stay strictly on raised bunds (Aghers) between paddy fields; never step into wet seedling plots.',
-      'Do not touch sacred sacrificial altar bamboo poles (Babo & Lapang).' 
+      'Never touch or break delicate limestone stalactite formations that take thousands of years to grow.',
+      'Maintain whisper-level silence inside caves to prevent acoustic trauma to roosting bats.',
+      'Mandatory entry with certified tribal forest guide for visitor safety and community livelihoods.'
     ],
-    category: 'culture'
+    category: 'wildlife',
+    verifiedBadge: true,
+    rating: 4.95,
+    reviewsCount: 420
   },
   {
-    id: 'thembang-heritage',
-    name: 'Thembang Fortified Village',
-    nativeName: 'Thembang Dzong',
-    district: 'West Kameng',
-    altitude: '7,545 ft (2,300 m)',
-    coordinates: { lat: 27.3512, lng: 92.3831, mapX: 18, mapY: 56 },
-    community: 'Monpa',
-    description: 'A fortified 12th-century stone village perched like an eagle nest above the Dirang river valley. Entered through ancient double stone gates with defensive watchtower ruins and traditional Monpa stone masonry homes.',
-    whySpecial: 'A living community-managed heritage site where the village council (Bapu) runs its own community-based eco-tourism enterprise. Proceeds directly fund snow leopard conservation, red panda tracking, and school stipends.',
-    bestTime: 'October to May (Apple blossom in March-April; clear mountain views in winter)',
+    id: 'sirpur-heritage',
+    name: 'Sirpur Historical Complex',
+    nativeName: 'सिरपुर ऐतिहासिक धरोहर स्थल (Shripur - City of Wealth)',
+    district: 'Mahasamund',
+    region: 'Central Plains',
+    altitude: '870 ft (265 m)',
+    coordinates: { lat: 21.3468, lng: 82.1764, mapX: 62, mapY: 48 },
+    community: 'Traditional artisans, rural potters & farmers',
+    description: 'An immense archaeological treasure on the banks of the sacred Mahanadi River. Sirpur was the 5th-8th century capital of South Kosala where Buddhist monasteries, Hindu temples, and Jain viharas coexisted in peace.',
+    whySpecial: 'Home to the magnificent 7th-century Lakshmana Temple, India’s finest surviving red-brick temple with intricate terracotta carvings depicting Vishnu avatar legends, Krishna-lila, and Gandharvas.',
+    bestTime: 'October to March (Pleasant sunny days for temple exploration)',
     howToReach: {
-      gateway: 'Guwahati / Tezpur',
-      roadTransit: 'Guwahati to Tezpur, then ascend via Bhalukpong & Bomdila to Dirang, then 14 km spur road to Thembang (approx. 7 hours)',
-      nearestAir: 'Tezpur (175 km) or Guwahati (310 km)',
-      nearestRail: 'Bhalukpong (110 km) or Rangapara'
+      gateway: 'Raipur (78 km)',
+      roadTransit: 'Fast 1.5-hour drive via 4-lane NH-53; frequent tourist shuttles and private taxis.',
+      nearestAir: 'Raipur Swami Vivekananda Airport (85 km)',
+      nearestRail: 'Mahasamund (35 km) or Raipur Junction (78 km)'
     },
+    tourismLoad: 'LOW',
+    currentVisitors: 140,
+    capacityLimit: 750,
+    crowdTrend: [10, 25, 40, 50, 45, 30, 20, 5],
+    recommendedTime: 'Golden morning 07:30 - 10:30 AM or late afternoon sunset over the brick spires',
+    alternativeDestinations: ['bhoramdeo-temple', 'madku-dweep', 'champaran'],
     nearbyExperiences: [
-      'Walk along ancient defensive Dzong walls and fortified archways',
-      'Red panda and Monal pheasant tracking in community conserved forests',
-      'Apple and kiwi orchard harvest with host families',
-      'Traditional Monpa wood mask carving session'
+      'Architectural walk of Anand Prabhu Kuti Vihara and Surang Tila',
+      'Sunset meditation by the ancient Mahanadi river ghats',
+      'Explore archaeological museum with ancient bronze statues'
     ],
-    festivals: ['Losar (Monpa New Year in Feb/March)', 'Chhoskar (Harvest sacred scripture procession)'],
-    localFood: ['Zan porridge with wild mountain spinach', 'Thukpa with dry yak meat', 'Khura buckwheat pancakes', 'Salt butter tea with roasted barley tsampa'],
+    festivals: ['Sirpur National Dance & Music Festival (January)', 'Buddha Purnima'],
+    localFood: ['Chhattisgarhi Thali with 7 wild greens (Bhaji)', 'Chila', 'Gulgula sweet dumplings'],
     homestaysCount: 7,
-    approximateBudget: '₹1,900 - ₹3,100 / day',
+    approximateBudget: '₹1,400 - ₹2,600 / day',
+    localImpactRatio: 0.86,
     difficulty: 'Easy',
-    tags: ['Fortified Dzong', 'Monpa Heritage', 'Community Conserved Area', 'Red Panda', 'Stone Village'],
+    tags: ['Archaeology', 'Red Brick Temple', 'Buddhist Vihara', 'Mahanadi', '7th Century'],
+    images: [
+      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80'
+    ],
+    responsibleGuidelines: [
+      'Do not climb or lean on ancient brick friezes and excavated stone bas-reliefs.',
+      'Hire a local ASI-licensed rural storyteller guide to support community heritage preservation.',
+      'Remove footwear at consecrated temple platforms.'
+    ],
+    category: 'heritage',
+    verifiedBadge: true,
+    rating: 4.88,
+    reviewsCount: 310
+  },
+  {
+    id: 'bhoramdeo-temple',
+    name: 'Bhoramdeo Temple Complex',
+    nativeName: 'भोरमदेव मंदिर (The Khajuraho of Chhattisgarh)',
+    district: 'Kabirdham',
+    region: 'Central Plains',
+    altitude: '1,320 ft (402 m)',
+    coordinates: { lat: 22.1187, lng: 81.1578, mapX: 34, mapY: 42 },
+    community: 'Baiga & Gond tribes',
+    description: 'A 1,000-year-old architectural jewel built between the 7th and 11th centuries by Nagwanshi rulers, framed against the misty backdrop of the Maikal mountain range.',
+    whySpecial: 'Celebrated as the "Khajuraho of Chhattisgarh" for its exquisite stone carvings of deities, celestial dancers, elephants, and erotic friezes depicting the harmony of spiritual and temporal life.',
+    bestTime: 'October to March',
+    howToReach: {
+      gateway: 'Kawardha (18 km) / Raipur (135 km)',
+      roadTransit: 'Scenic rural highway through sugarcane fields and Baiga tribal hamlets with views of the Maikal hills.',
+      nearestAir: 'Raipur Airport (145 km)',
+      nearestRail: 'Bilaspur (115 km) or Raipur (135 km)'
+    },
+    tourismLoad: 'LOW',
+    currentVisitors: 110,
+    capacityLimit: 600,
+    crowdTrend: [5, 20, 30, 45, 40, 25, 15, 5],
+    recommendedTime: 'Sunrise at 06:30 AM when the eastern light illuminates the sanctum relief',
+    alternativeDestinations: ['sirpur-heritage', 'madku-dweep'],
+    nearbyExperiences: [
+      'Visit nearby Madwa Mahal (wedding pavilion) and Cherki Mahal brick shrine',
+      'Village interaction with Baiga medicine elders skilled in herbal forest lore',
+      'Trek into the foot of the Maikal hills and Kanha buffer forest'
+    ],
+    festivals: ['Bhoramdeo Mahotsav (March)', 'Maha Shivaratri'],
+    localFood: ['Kusli sweet pastry', 'Moong dal Bafauri', 'Gond herbal decoctions'],
+    homestaysCount: 4,
+    approximateBudget: '₹1,600 - ₹3,000 / day',
+    localImpactRatio: 0.91,
+    difficulty: 'Easy',
+    tags: ['Khajuraho of CG', 'Nagara Architecture', 'Maikal Hills', '11th Century', 'Baiga Lore'],
+    images: [
+      'https://images.unsplash.com/photo-1609137144822-44676100c5c4?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80'
+    ],
+    responsibleGuidelines: [
+      'Respect the sanctity of ongoing local worship in the inner garbhagriha.',
+      'Engage Baiga village elders with genuine respect; ask permission prior to photography.',
+      'Carry back all personal packaging and wrappers.'
+    ],
+    category: 'heritage',
+    verifiedBadge: true,
+    rating: 4.85,
+    reviewsCount: 260
+  },
+  {
+    id: 'mainpat-plateau',
+    name: 'Mainpat Plateau & Ulta Pani',
+    nativeName: 'मैनपाट (The Shimla of Chhattisgarh)',
+    district: 'Surguja',
+    region: 'North Chhattisgarh',
+    altitude: '3,600 ft (1,097 m)',
+    coordinates: { lat: 22.8134, lng: 83.2845, mapX: 68, mapY: 20 },
+    community: 'Tibetan settlement, Oraon & Yadav communities',
+    description: 'A lush highland plateau crowned with rolling green meadows, pine forests, deep waterfalls, and vibrant Tibetan Buddhist monasteries established in the 1960s by Tibetan refugees.',
+    whySpecial: 'Famed for "Ulta Pani" (a natural gravitational anomaly where water flows uphill against gravity) and the bouncy marshlands of "Jaljali" where the earth shakes beneath your feet.',
+    bestTime: 'Throughout the year (Misty monsoons & chilly winters with morning frost)',
+    howToReach: {
+      gateway: 'Ambikapur (55 km) / Raipur (360 km)',
+      roadTransit: 'Winding ghat road climbing through dense sal and bamboo hills from Ambikapur.',
+      nearestAir: 'Raipur Airport (370 km) or Ranchi Airport (280 km)',
+      nearestRail: 'Ambikapur Railway Station (ABKP - 55 km)'
+    },
+    tourismLoad: 'MODERATE',
+    currentVisitors: 340,
+    capacityLimit: 700,
+    crowdTrend: [10, 30, 60, 80, 75, 55, 30, 10],
+    recommendedTime: 'Morning 08:30 AM - 12:30 PM for monastery prayer chanting & waterfall treks',
+    alternativeDestinations: ['barnawapara', 'bhoramdeo-temple'],
+    nearbyExperiences: [
+      'Listen to monks chanting and spinning giant prayer wheels at Dhakpo Shedrupling Monastery',
+      'Experience the zero-gravity water flow test at Ulta Pani',
+      'Trek to Tiger Point and Fish Point waterfalls plunging into mist',
+      'Jump on the floating spring marsh at Jaljali'
+    ],
+    festivals: ['Losar Tibetan New Year', 'Mainpat Mahotsav (February)'],
+    localFood: ['Tibetan Butter Tea & Steamed Momos', 'Thukpa noodle broth', 'Surguja local Kodo-Kutki millet kheer'],
+    homestaysCount: 9,
+    approximateBudget: '₹1,800 - ₹3,400 / day',
+    localImpactRatio: 0.9,
+    difficulty: 'Moderate',
+    tags: ['Hill Station', 'Tibetan Culture', 'Ulta Pani', 'Jaljali', 'Monastery', 'Waterfalls'],
     images: [
       'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1465919292275-c60b4c6295eb?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80'
     ],
     responsibleGuidelines: [
-      'Pay all guide and homestay fees through the official Thembang Community Heritage Council office.',
-      'Carry your own reusable cloth bag; Thembang operates a strict zero-plastic village code.',
-      'Remove footwear when entering sacred Buddhist prayer rooms inside ancient homes.'
+      'Walk clockwise around Buddhist stupas and prayer flags.',
+      'Support Tibetan carpet-weaving cooperative centers run by local refugee families.',
+      'Drive carefully on foggy hairpin curves during winter and monsoon mornings.'
     ],
-    category: 'village'
+    category: 'nature',
+    verifiedBadge: true,
+    rating: 4.82,
+    reviewsCount: 345
   },
   {
-    id: 'tuting-gelling',
-    name: 'Tuting & Gelling (Great Siang Bend)',
-    nativeName: 'Pemako / Tsangpo Gorge Gateway',
-    district: 'Upper Siang',
-    altitude: '2,600 ft (Tuting) to 6,800 ft (Gelling)',
-    coordinates: { lat: 28.9877, lng: 94.9082, mapX: 62, mapY: 18 },
-    community: 'Adi (Simong, Karko, Minyong), Memba, Khamba',
-    description: 'Where the mighty Yarlung Tsangpo carves through the deepest canyon on Earth to enter India as the Siang river. Gelling sits just miles from the northern frontier, surrounded by hidden Buddhist pilgrimage caves of Pema Kod.',
-    whySpecial: 'The ultimate cradle of Adi animist mythology and Tantric Buddhist lore. Here, cane suspension bridges 200 meters long sway across roaring white torrents with no nails—only cane, rattan, and collective tribal craftsmanship.',
-    bestTime: 'November to April (Crisp sunny days and calm turquoise river waters)',
+    id: 'barnawapara-sanctuary',
+    name: 'Barnawapara Wildlife Sanctuary',
+    district: 'Baloda Bazar / Mahasamund',
+    region: 'Central Plains',
+    altitude: '1,200 ft (365 m)',
+    coordinates: { lat: 21.4128, lng: 82.4187, mapX: 68, mapY: 46 },
+    community: 'Tribal forest dwellers, Kamar tribe',
+    description: 'A 245-sq-km wilderness of mixed deciduous forests, teak glades, and shimmering waterholes. Home to healthy populations of leopards, Indian bison (Gaur), sloth bears, sambar, nilgai, and over 150 species of birds.',
+    whySpecial: 'Renowned for exceptional open-jeep safari sightings of the majestic Indian Gaur (wild bison) and peaceful forest drives devoid of mass commercialization.',
+    bestTime: 'November to June (Sanctuary closed July-Oct during monsoon)',
     howToReach: {
-      gateway: 'Dibrugarh / Pasighat',
-      roadTransit: 'Pasighat to Yingkiong, then 4x4 drive along the Upper Siang canyon to Tuting (approx. 10-12 hours adventurous road)',
-      nearestAir: 'Pasighat Airport (230 km)',
-      nearestRail: 'Murkeongselek (Assam)'
+      gateway: 'Raipur (95 km)',
+      roadTransit: 'Scenic 2-hour drive from Raipur along the Mahanadi plain turning into teak canopy forest.',
+      nearestAir: 'Raipur Airport (90 km)',
+      nearestRail: 'Mahasamund (60 km) or Raipur (95 km)'
     },
+    tourismLoad: 'LOW',
+    currentVisitors: 160,
+    capacityLimit: 400,
+    crowdTrend: [30, 20, 10, 25, 50, 40, 15, 5],
+    recommendedTime: 'Early morning safari (06:00 - 09:30 AM) or dusk safari (03:30 - 06:00 PM)',
+    alternativeDestinations: ['kanger-valley', 'mainpat-plateau'],
     nearbyExperiences: [
-      'Cross the legendary cane and bamboo suspension bridge over the Siang',
-      'Pilgrimage hike to Dewakota and hidden caves of Pemako',
-      'Angling for Golden Mahseer in crystal-clear tributary confluences',
-      'Evening fireside Adi epic storytelling ballads (Abang)'
+      'Open jeep jungle safari with Kamar indigenous trackers',
+      'Birdwatching at Pakshi Vihar waterbody at daybreak',
+      'Night star-gazing from the forest department eco-tents'
     ],
-    festivals: ['Solung (September 1-3)', 'Aran (Spring hunting and harvest festival)'],
-    localFood: ['Lukter (pounded dried meat with bird’s eye chili)', 'Pepa (fermented bamboo fish)', 'Wild banana blossom fry', 'Smoked pork boiled with ginger & tapioca'],
-    homestaysCount: 5,
-    approximateBudget: '₹2,600 - ₹4,500 / day',
-    difficulty: 'Expedition',
-    tags: ['Siang Canyon', 'Cane Bridges', 'Pema Kod', 'Sacred Rivers', 'Adi Epic Lore'],
-    images: [
-      'https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80'
-    ],
-    responsibleGuidelines: [
-      'Always heed the guidance of local Adi village boatmen and cane bridge repairers.',
-      'Practice catch-and-release angling strictly; traditional tribal fishing boundaries are sacred.',
-      'Carry personal first-aid; medical evacuation from the canyon takes significant logistical effort.'
-    ],
-    category: 'trek'
-  },
-  {
-    id: 'wakro-namsai',
-    name: 'Wakro & Namsai (Golden Pagodas & Citrus)',
-    nativeName: 'Kamlang & Khamti Realm',
-    district: 'Lohit & Namsai',
-    altitude: '1,800 ft (550 m)',
-    coordinates: { lat: 27.7944, lng: 96.3475, mapX: 82, mapY: 60 },
-    community: 'Tai Khamti, Singpho, Digaru Mishmi',
-    description: 'A verdant lowland-to-foothill transition where golden Southeast-Asian style Theravada Buddhist monasteries gleam amidst extensive orange orchards, organic tea plantations, and the pristine Kamlang Wildlife Sanctuary.',
-    whySpecial: 'Homeland of the Tai Khamti with their ancient palm-leaf script (Lik-Tai) and the Singpho—the true indigenous originators of wild Indian tea (Phalap). Home to Glow Lake and tranquil river beaches.',
-    bestTime: 'October to March (Fragrant orange harvesting in Dec-Jan; Sangken Water Festival in April)',
-    howToReach: {
-      gateway: 'Dibrugarh / Tinsukia',
-      roadTransit: 'Dibrugarh to Namsai via Dhola-Sadiya or Parasuram Kund bridge (approx. 3.5 hours on smooth highways)',
-      nearestAir: 'Dibrugarh (120 km) or Tezu (45 km)',
-      nearestRail: 'Tinsukia (85 km)'
-    },
-    nearbyExperiences: [
-      'Visit the majestic Golden Pagoda (Kongmu Kham) at Tengapani',
-      'Experience the ancient Singpho wood-smoked tea (Phalap) pressing method',
-      'Orchard walk: pluck fresh sweet Wakro oranges with village farmers',
-      'Trek to the high mystical Glow Lake in Kamlang Sanctuary'
-    ],
-    festivals: ['Sangken (April 13-15 - Water Festival)', 'Shapawng Yawng Manau Poi (February)'],
-    localFood: ['Khao Lam (fragrant sticky rice roasted in bamboo tubes)', 'Pa Sa (raw pounded river fish soup with wild jungle herbs)', 'Smoked Singpho tea'],
-    homestaysCount: 16,
-    approximateBudget: '₹2,000 - ₹3,400 / day',
+    festivals: ['Wildlife Week Celebrations', 'Holi Tribal Bonfire'],
+    localFood: ['Rural chana dal Fara', 'Smoked brinjals with garlic paste', 'Mahua laddu'],
+    homestaysCount: 4,
+    approximateBudget: '₹2,500 - ₹4,500 / day (including safari permit)',
+    localImpactRatio: 0.93,
     difficulty: 'Easy',
-    tags: ['Golden Pagoda', 'Tai Khamti', 'Wild Tea', 'Orange Orchards', 'Kamlang Sanctuary'],
+    tags: ['Wildlife Safari', 'Indian Gaur', 'Leopards', 'Teak Forest', 'Birdwatching'],
     images: [
-      'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80'
+    ],
+    responsibleGuidelines: [
+      'Strict silence is required on safari tracks; do not shout or play music.',
+      'Never disembark from the authorized safari gypsy inside sanctuary zones.',
+      'Wear neutral, earth-toned clothing (khaki, olive, brown) to avoid agitating animals.'
+    ],
+    category: 'wildlife',
+    verifiedBadge: true,
+    rating: 4.86,
+    reviewsCount: 210
+  },
+  {
+    id: 'kondagaon-dokra-hub',
+    name: 'Kondagaon Craft Heritage Village',
+    nativeName: 'कोण्डागांव (शिल्प नगरी - The Craft Capital of Chhattisgarh)',
+    district: 'Kondagaon',
+    region: 'Bastar & South',
+    altitude: '1,950 ft (594 m)',
+    coordinates: { lat: 19.5982, lng: 81.6664, mapX: 47, mapY: 68 },
+    community: 'Ghadwa (Bell metal casters), Muria, Halba',
+    description: 'The world-famous heartland of Bastar Dokra (ancient lost-wax bell metal casting) and terracotta sculpting. The village lanes are dotted with open-air kilns, beeswax sculpting workshops, and master artisans whose families have cast bronze sculptures for 4,000 years since the Indus Valley era.',
+    whySpecial: 'Home to multiple National Award-winning craftspersons like Master Jaidev Baghel’s lineage. Visitors can sit on the ground alongside artisans, knead beeswax threads, and witness molten brass pouring into earthen molds.',
+    bestTime: 'October to April',
+    howToReach: {
+      gateway: 'Jagdalpur (70 km) / Raipur (225 km)',
+      roadTransit: 'Located right on NH-30 connecting Raipur and Jagdalpur, making it the ideal craft stopover.',
+      nearestAir: 'Jagdalpur (72 km) or Raipur (220 km)',
+      nearestRail: 'Jagdalpur (70 km)'
+    },
+    tourismLoad: 'LOW',
+    currentVisitors: 95,
+    capacityLimit: 350,
+    crowdTrend: [5, 15, 30, 40, 45, 30, 15, 5],
+    recommendedTime: 'Morning 09:30 AM - 01:30 PM (when artisans work on delicate wax coils)',
+    alternativeDestinations: ['bastar-tribal-village', 'jagdalpur-heritage'],
+    nearbyExperiences: [
+      'Hands-on Dokra casting workshop: create your own brass talisman with a master artisan',
+      'Terracotta sculpture studio tour at Kumharpara',
+      'Interact with Ghadwa metal masters and listen to casting chants'
+    ],
+    festivals: ['Shilp Mahotsav', 'Bastar Madai Fair'],
+    localFood: ['Bastar sweet Sal seed porridge', 'Chila with fresh green chutney', 'Forest honey tea'],
+    homestaysCount: 5,
+    approximateBudget: '₹1,500 - ₹2,900 / day',
+    localImpactRatio: 0.96,
+    difficulty: 'Easy',
+    tags: ['Dokra Art', 'Lost Wax Casting', 'National Award Artisans', 'Terracotta', 'Bastar Craft'],
+    images: [
+      'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80'
+    ],
+    responsibleGuidelines: [
+      'Buy directly from the craftsperson or family cooperatives to eliminate exploitative middlemen.',
+      'Do not aggressively bargain; honor the days of hand craftsmanship in each lost-wax casting.',
+      'Do not photograph confidential master designs without asking permission.'
+    ],
+    category: 'tribal',
+    verifiedBadge: true,
+    rating: 4.96,
+    reviewsCount: 340
+  },
+  {
+    id: 'danteshwari-temple',
+    name: 'Danteshwari Temple Dantewada',
+    nativeName: 'माँ दंतेश्वरी मंदिर दंतेवाड़ा (Sacred 52nd Shaktipeeth)',
+    district: 'Dantewada',
+    region: 'Bastar & South',
+    altitude: '1,150 ft (350 m)',
+    coordinates: { lat: 18.8942, lng: 81.3508, mapX: 42, mapY: 88 },
+    community: 'Gond, Maria, Bhatra',
+    description: 'One of the sacred 52 Shaktipeeths of India, built in the 14th century by Chalukya rulers at the mystical confluence of the holy Shankhini and Dankini rivers. Maa Danteshwari is the revered presiding deity of the entire Bastar region.',
+    whySpecial: 'The spiritual epicenter of the 75-day Bastar Dussehra, where tribal chieftains and royal priests unite in ancient rites that fuse Vedic Hinduism with animist tribal cosmology.',
+    bestTime: 'October to March (Grandest during Bastar Dussehra in September/October)',
+    howToReach: {
+      gateway: 'Jagdalpur (85 km)',
+      roadTransit: 'Scenic drive through green sal ridges on State Highway 5; regular AC and state transport buses.',
+      nearestAir: 'Jagdalpur Airport (88 km)',
+      nearestRail: 'Dantewada Railway Station (DWZ - 3 km)'
+    },
+    tourismLoad: 'HIGH',
+    currentVisitors: 780,
+    capacityLimit: 1000,
+    crowdTrend: [25, 45, 80, 95, 90, 70, 45, 20],
+    recommendedTime: 'Early morning darshan 06:00 - 08:30 AM before afternoon queues gather',
+    alternativeDestinations: ['bhoramdeo-temple', 'sirpur-heritage'],
+    nearbyExperiences: [
+      'Visit the holy confluence (Sangam) of Dankini and Shankhini rivers',
+      'Explore the ancient Garuda Pillar and Chalukya-era stone inscriptions',
+      'Walk through Dantewada brass craft and bamboo souvenir bazaar'
+    ],
+    festivals: ['Bastar Dussehra', 'Navratri Mela', 'Fagun Madai'],
+    localFood: ['Temple Mahaprasad', 'Chhattisgarhi Khaja sweet', 'Sorghum roti with til chutney'],
+    homestaysCount: 4,
+    approximateBudget: '₹1,200 - ₹2,400 / day',
+    localImpactRatio: 0.88,
+    difficulty: 'Easy',
+    tags: ['Shaktipeeth', '14th Century', 'Confluence', 'Bastar Dussehra', 'Sacred Heritage'],
+    images: [
+      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80'
+    ],
+    responsibleGuidelines: [
+      'Follow traditional dress codes (dhoti/kurta or saree/suit) for sanctum entry.',
+      'Deposit phones and leather articles in the temple locker prior to entering the inner hall.',
+      'Do not bathe with soap or chemicals in the sacred river confluence.'
+    ],
+    category: 'heritage',
+    verifiedBadge: true,
+    rating: 4.9,
+    reviewsCount: 480
+  },
+  {
+    id: 'dongargarh-temple',
+    name: 'Maa Bambleshwari Temple Dongargarh',
+    nativeName: 'माँ बम्लेश्वरी मंदिर डोंगरगढ़ (Hilltop Ropeway Pilgrimage)',
+    district: 'Rajnandgaon',
+    region: 'Central Plains',
+    altitude: '1,600 ft (488 m)',
+    coordinates: { lat: 21.1895, lng: 80.7588, mapX: 25, mapY: 52 },
+    community: 'Local rural community & pilgrim guilds',
+    description: 'A hilltop shrine perched atop an imposing 1,600-foot solitary granite hill with panoramic 360-degree views of lakes and forested plains. Accessible by climbing 1,000 steps or via Chhattisgarh’s premier passenger ropeway.',
+    whySpecial: 'Houses the sacred shrine of Badi Bambleshwari atop the peak and Chhoti Bambleshwari at ground level, drawing millions during Navratri melas.',
+    bestTime: 'October to March',
+    howToReach: {
+      gateway: 'Rajnandgaon (40 km) / Raipur (105 km)',
+      roadTransit: 'Well-connected by NH-53 and dedicated 4-lane pilgrim corridors.',
+      nearestAir: 'Raipur Swami Vivekananda Airport (115 km)',
+      nearestRail: 'Dongargarh Railway Station (DGG - 2 km)'
+    },
+    tourismLoad: 'HIGH',
+    currentVisitors: 890,
+    capacityLimit: 1200,
+    crowdTrend: [35, 55, 85, 95, 85, 75, 50, 30],
+    recommendedTime: 'Early morning 06:00 - 08:30 AM via ropeway to beat midday heat and queues',
+    alternativeDestinations: ['bhoramdeo-temple', 'madku-dweep'],
+    nearbyExperiences: [
+      'Ropeway ride with sweeping aerial vistas over lakes and paddy fields',
+      'Sunrise walk around Pragyagiri Buddhist monument hill',
+      'Boat ride in Chitrangi lake at the foot of the hill'
+    ],
+    festivals: ['Chaitra Navratri', 'Kwar Navratri Fair'],
+    localFood: ['Dongargarh sweet Peda', 'Moong dal Bafauri', 'Poha with Sev and jalebi'],
+    homestaysCount: 6,
+    approximateBudget: '₹1,200 - ₹2,200 / day',
+    localImpactRatio: 0.85,
+    difficulty: 'Moderate',
+    tags: ['Hilltop Shrine', 'Ropeway', 'Pilgrimage', 'Pragyagiri', 'Lakes'],
+    images: [
+      'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
+    ],
+    responsibleGuidelines: [
+      'Book ropeway slots online via the platform to avoid standing in long ticket lines.',
+      'Keep the hilltop clean; dispose of coconut shells and offerings only in green bins.',
+      'Support local flower and prasad vendors who belong to the local women’s SHG groups.'
+    ],
+    category: 'heritage',
+    verifiedBadge: true,
+    rating: 4.75,
+    reviewsCount: 390
+  },
+  {
+    id: 'madku-dweep',
+    name: 'Madku Dweep Island Sanctuary',
+    nativeName: 'मदकू द्वीप (Sacred River Island of Mandukya Rishi)',
+    district: 'Bilaspur',
+    region: 'Central Plains',
+    altitude: '820 ft (250 m)',
+    coordinates: { lat: 21.9328, lng: 81.8247, mapX: 52, mapY: 36 },
+    community: 'Riverine farmers, Christian tribal fellowship & local boatmen',
+    description: 'A serene 35-hectare emerald river island formed by the bifurcation of the holy Shivnath River. Revered as the hermitage of sage Mandukya Rishi who composed the philosophical Mandukya Upanishad.',
+    whySpecial: 'Archaeological excavations have uncovered 19 ancient stone temples dating from the 10th-11th centuries Kalachuri period, alongside an annual centennial peace fair celebrated by diverse faiths.',
+    bestTime: 'October to March (River stays calm and crystal clear)',
+    howToReach: {
+      gateway: 'Bilaspur (45 km) / Raipur (85 km)',
+      roadTransit: 'Accessible via a scenic road bridge connecting to the quiet riverbank island.',
+      nearestAir: 'Bilaspur Bilasa Devi Airport (40 km) or Raipur (90 km)',
+      nearestRail: 'Bhatapara (22 km) or Bilaspur (45 km)'
+    },
+    tourismLoad: 'LOW',
+    currentVisitors: 80,
+    capacityLimit: 300,
+    crowdTrend: [5, 15, 25, 30, 35, 25, 10, 5],
+    recommendedTime: 'Late afternoon 03:00 - 06:00 PM for magical golden river sunsets',
+    alternativeDestinations: ['sirpur-heritage', 'bhoramdeo-temple'],
+    nearbyExperiences: [
+      'Walk among excavated 11th-century Kalachuri temple ruins',
+      'Country boat cruise along the tranquil waters of Shivnath river',
+      'Birdwatching for river terns, egrets, and kingfishers'
+    ],
+    festivals: ['Madku Dweep Mela (February)', 'Shivnath Aarti'],
+    localFood: ['Fresh river-spinach curry', 'Rice flour Fara with sesame', 'Mahua sweet broth'],
+    homestaysCount: 3,
+    approximateBudget: '₹1,200 - ₹2,000 / day',
+    localImpactRatio: 0.95,
+    difficulty: 'Easy',
+    tags: ['River Island', 'Kalachuri Temples', 'Mandukya Rishi', 'Shivnath River', 'Offbeat'],
+    images: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80'
+    ],
+    responsibleGuidelines: [
+      'Maintain the peaceful, meditative ambiance of the island sanctuary.',
+      'Do not litter or wash plastic along the Shivnath riverbanks.',
+      'Use certified local boatmen for river crossings.'
+    ],
+    category: 'offbeat',
+    verifiedBadge: true,
+    rating: 4.8,
+    reviewsCount: 175
+  },
+  {
+    id: 'tamda-ghumar',
+    name: 'Tamda Ghumar & Mendri Ghumar',
+    nativeName: 'तामड़ा घूमर एवं मेंद्री घूमर (The Hidden Canyons)',
+    district: 'Bastar',
+    region: 'Bastar & South',
+    altitude: '1,780 ft (542 m)',
+    coordinates: { lat: 19.1685, lng: 81.6542, mapX: 45, mapY: 76 },
+    community: 'Maria & Muria tribal hamlets',
+    description: 'Two spectacular, untouched seasonal canyon waterfalls located just 12 km from Chitrakote. The water plunges 100 feet over a dramatic horse-tail cliff into a deep forested valley enveloped in mist.',
+    whySpecial: 'The ultimate low-crowd alternative to Chitrakote. Uncommercialized, quiet, and encircled by deep ravines, wild peacocks, and pristine tribal farmland.',
+    bestTime: 'July to December',
+    howToReach: {
+      gateway: 'Jagdalpur (42 km) or Chitrakote (12 km)',
+      roadTransit: 'Scenic rural road meandering through tribal villages with blooming yellow mustard fields in winter.',
+      nearestAir: 'Jagdalpur (45 km)',
+      nearestRail: 'Jagdalpur (42 km)'
+    },
+    tourismLoad: 'LOW',
+    currentVisitors: 65,
+    capacityLimit: 250,
+    crowdTrend: [5, 10, 20, 30, 25, 15, 10, 5],
+    recommendedTime: 'Mid-morning or sunset for vibrant rainbow effects in the waterfall mist',
+    alternativeDestinations: ['chitrakote-falls', 'tirathgarh-falls'],
+    nearbyExperiences: [
+      'Picnic over the canyon rim with panoramic green valley views',
+      'Valley rim hiking along tribal goat herder trails',
+      'Photography of natural mist rainbows'
+    ],
+    festivals: ['Tribal Harvest Madai', 'Karma Dance Night'],
+    localFood: ['Woodfire roasted corn on the cob', 'Chila with fresh forest herbs', 'Fresh coconut water'],
+    homestaysCount: 3,
+    approximateBudget: '₹1,200 - ₹2,200 / day',
+    localImpactRatio: 0.97,
+    difficulty: 'Easy',
+    tags: ['Hidden Waterfall', 'Canyon', 'Low Crowds', 'Rainbow Mist', 'Bastar Secret'],
+    images: [
+      'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1518457607834-6e8d80c183c5?auto=format&fit=crop&w=1200&q=80'
     ],
     responsibleGuidelines: [
-      'Wear respectful attire covering knees and shoulders within the monastery grounds.',
-      'Purchase organic smoked Phalap tea directly from village women self-help cooperatives.',
-      'Do not pluck citrus or tea leaves without explicit permission from host families.'
+      'Stay well back from the unbarricaded canyon cliff edge.',
+      'Take all trash back to Jagdalpur or your homestay.',
+      'Do not disturb grazing livestock or tribal farm boundaries.'
     ],
-    category: 'food'
-  },
-  {
-    id: 'shergaon-rupa',
-    name: 'Shergaon (Sacred Forests of Sherdukpen)',
-    nativeName: 'Senchhe',
-    district: 'West Kameng',
-    altitude: '6,400 ft (1,950 m)',
-    coordinates: { lat: 27.1234, lng: 92.2612, mapX: 14, mapY: 66 },
-    community: 'Sherdukpen',
-    description: 'A serene mountain village set in an amphitheater of pine hills, apple orchards, and crystal-clear mountain trout streams. Renowned for its community-led conservation group (Garung Thuk) preserving sacred groves.',
-    whySpecial: 'Witness the rare blend of Tibetan Mahayana Buddhism and pre-Buddhist Shamanism (Nyizi). Home to ancient wooden Gompas, sustainable trout farms, and traditional mud-plastered stone dwellings.',
-    bestTime: 'September to May (Crisp winters with blooming wild rhododendrons and cherry blossoms)',
-    howToReach: {
-      gateway: 'Guwahati / Tezpur',
-      roadTransit: 'Guwahati via Orang & Kalaktang to Shergaon on a scenic mountain highway (approx. 5.5 hours)',
-      nearestAir: 'Guwahati (220 km) or Tezpur (140 km)',
-      nearestRail: 'Rangapara (115 km)'
-    },
-    nearbyExperiences: [
-      'Hike through centuries-old Chhoskorong sacred forest groves',
-      'Participate in traditional kiwi and plum jam making sessions',
-      'Visit the 250-year-old Zengbu Gompa wooden monastery',
-      'Learn Sherdukpen silk thread spinning and wood bowl turning'
-    ],
-    festivals: ['Kro-Chekor (May harvest invocation)', 'Lossar (February New Year)'],
-    localFood: ['Khazi (Sherdukpen spiced rice pancake)', 'Trout wrapped in wild turmeric leaf', 'Boiled pumpkin blossom fritters', 'Locally brewed Marua'],
-    homestaysCount: 9,
-    approximateBudget: '₹1,700 - ₹2,900 / day',
-    difficulty: 'Easy',
-    tags: ['Sherdukpen Tribe', 'Apple Orchards', 'Sacred Groves', 'Kiwi Farms', 'Peaceful Village'],
-    images: [
-      'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80'
-    ],
-    responsibleGuidelines: [
-      'Do not pluck wild orchids or disturb stones in the sacred grove zones.',
-      'Respect water sources: never wash laundry or soap utensils directly in village mountain streams.',
-      'Support local village youth groups maintaining the botanical heritage trails.'
-    ],
-    category: 'village'
+    category: 'offbeat',
+    verifiedBadge: true,
+    rating: 4.92,
+    reviewsCount: 165
   }
 ];

@@ -1,18 +1,32 @@
-// ARUNYA Platform Type Definitions
+// DHAROHARCG Platform Type Definitions
+// Smart Tourism & Cultural Heritage Platform for Chhattisgarh
+// SIH Problem Statement ID: 26204 | Team Kshitij
 
-export type DestinationCategory = 'village' | 'festival' | 'homestay' | 'trek' | 'food' | 'culture';
+export type DestinationCategory =
+  | 'heritage'
+  | 'nature'
+  | 'waterfalls'
+  | 'wildlife'
+  | 'tribal'
+  | 'adventure'
+  | 'festivals'
+  | 'food'
+  | 'offbeat';
+
+export type TourismLoadLevel = 'LOW' | 'MODERATE' | 'HIGH';
 
 export interface Destination {
   id: string;
   name: string;
   nativeName?: string;
   district: string;
+  region: 'North Chhattisgarh' | 'Central Plains' | 'Bastar & South';
   altitude: string;
   coordinates: {
     lat: number;
     lng: number;
-    mapX: number; // Percent X for custom artistic map (0-100)
-    mapY: number; // Percent Y for custom artistic map (0-100)
+    mapX: number; // Percent X on custom 2D/3D map (0-100)
+    mapY: number; // Percent Y on custom 2D/3D map (0-100)
   };
   community: string;
   description: string;
@@ -24,37 +38,59 @@ export interface Destination {
     nearestAir: string;
     nearestRail: string;
   };
+  tourismLoad: TourismLoadLevel;
+  currentVisitors: number;
+  capacityLimit: number;
+  crowdTrend: number[]; // 24-hour crowd percentage [morning to night]
+  recommendedTime: string;
+  alternativeDestinations: string[]; // Lower-crowd alternatives
   nearbyExperiences: string[];
   festivals: string[];
   localFood: string[];
   homestaysCount: number;
   approximateBudget: string;
+  localImpactRatio: number; // e.g., 0.88 means 88% stays in local economy
   difficulty: 'Easy' | 'Moderate' | 'Demanding' | 'Expedition';
   tags: string[];
   images: string[];
   responsibleGuidelines: string[];
   category: DestinationCategory;
+  verifiedBadge: boolean;
+  rating: number;
+  reviewsCount: number;
+}
+
+export interface TourismLoadData {
+  destinationId: string;
+  destinationName: string;
+  district: string;
+  currentLevel: TourismLoadLevel;
+  currentVisitors: number;
+  capacityLimit: number;
+  statusText: string;
+  recommendedHours: string;
+  alternativeDestinations: { id: string; name: string; load: TourismLoadLevel; distanceKm: number }[];
+  hourlyTrend: { hour: string; level: number }[];
 }
 
 export interface DistrictInfo {
   id: string;
   name: string;
   headquarters: string;
-  zone: 'Western' | 'Central' | 'Siang Belt' | 'Eastern' | 'Southern';
+  zone: 'Northern Highlands' | 'Central Plains' | 'Southern Bastar Plateau';
   tagline: string;
   elevationRange: string;
   nature: {
-    mountains: string[];
-    rivers: string[];
     waterfalls: string[];
     forests: string[];
     wildlife: string[];
+    rivers: string[];
+    caves?: string[];
   };
   culture: {
     tribes: string[];
-    architecture: string;
-    clothing: string;
     crafts: string[];
+    architecture: string;
     musicDances: string[];
   };
   experiences: {
@@ -76,83 +112,123 @@ export interface DistrictInfo {
   heroImage: string;
 }
 
-export interface Story {
+export interface Experience {
   id: string;
   title: string;
   subtitle: string;
-  storyteller: string;
-  role: string;
+  hostName: string;
+  hostRole: string;
+  hostAvatar: string;
+  community: string;
   village: string;
   district: string;
-  community: string;
-  readTime: string;
-  audioDuration: string;
-  coverImage: string;
-  ambientSound: 'pines' | 'hearth' | 'river' | 'monastery';
-  excerpt: string;
-  content: string[];
-  quote: string;
-  gallery: string[];
-}
-
-export interface LocalPerson {
-  id: string;
-  name: string;
-  role: string;
-  village: string;
-  district: string;
-  community: string;
-  bio: string;
-  specialties: string[];
-  image: string;
-  quote: string;
-  experienceTitle: string;
-  experiencePrice: string;
-  verifiedCommunityBadge: boolean;
-}
-
-export type FestivalStatus = 'Confirmed' | 'Expected' | 'To be announced';
-
-export interface Festival {
-  id: string;
-  name: string;
-  location: string;
-  district: string;
-  community: string;
-  month: number; // 1-12
-  monthName: string;
-  approximateDate: string;
-  status: FestivalStatus;
-  type: 'Agricultural' | 'Religious' | 'Traditional' | 'Cultural';
-  culturalMeaning: string;
   duration: string;
-  travelerExperience: string;
-  etiquette: string[];
-  photographyRule: string;
+  priceINR: number;
+  languages: string[];
+  maxGroupSize: number;
+  verifiedStatus: 'COMMUNITY VERIFIED' | 'PENDING' | 'VERIFIED';
+  communityRating: number;
+  reviewsCount: number;
+  impactShare: {
+    hostGuide: number; // Percentage
+    artisanCommunity: number;
+    villageFund: number;
+  };
+  category: 'Tribal Craft' | 'Forest & Nature' | 'Culinary' | 'Folk Culture' | 'Heritage Trail';
+  description: string;
+  inclusions: string[];
+  prerequisites?: string[];
   image: string;
 }
 
-export interface RouteStep {
-  stepNumber: number;
-  title: string;
-  type: 'start' | 'village' | 'homestay' | 'forest' | 'kitchen' | 'river' | 'festival' | 'end';
-  location: string;
-  description: string;
-  altitude?: string;
-  transitHours?: string;
+export interface Product {
+  id: string;
+  name: string;
+  artisanName: string;
+  artisanVillage: string;
+  district: string;
+  community: string;
+  craftCategory: 'Tribal Art' | 'Handicrafts' | 'Textiles' | 'Local Food' | 'Decor' | 'Jewellery' | 'Souvenirs';
+  priceINR: number;
+  originalPriceINR?: number;
+  inStock: boolean;
+  stockCount: number;
+  verifiedArtisan: boolean;
+  rating: number;
+  reviewsCount: number;
+  image: string;
+  model3dType?: 'dokra_deer' | 'iron_mask' | 'terracotta_horse' | 'kosa_shawl' | 'honey_jar';
+  materials: string[];
+  originStory: string;
+  artisanStory: string;
+  impactContribution: number; // Percentage that goes directly to artisan
 }
 
-export interface TravelRoute {
+export interface CartItem {
+  product: Product;
+  quantity: number;
+}
+
+export interface Badge {
   id: string;
   title: string;
-  subtitle: string;
-  durationDays: number;
-  style: string;
-  difficulty: string;
-  coverImage: string;
-  highlights: string[];
-  steps: RouteStep[];
-  culturalFocus: string;
+  category: string;
+  iconName: string;
+  description: string;
+  unlocked: boolean;
+  unlockedDate?: string;
+  criteria: string;
+}
+
+export interface DigitalCertificate {
+  id: string;
+  certificateNumber: string;
+  experienceTitle: string;
+  travelerName: string;
+  issueDate: string;
+  verificationHash: string;
+  isDemo: boolean;
+  hostName: string;
+  district: string;
+  category: string;
+}
+
+export interface DharoharPass {
+  travelerId: string;
+  travelerName: string;
+  travelerAvatar: string;
+  passNumber: string;
+  level: 'Explorer' | 'Custodian' | 'Heritage Ambassador';
+  placesVisited: string[];
+  experiencesCompleted: string[];
+  badges: Badge[];
+  certificates: DigitalCertificate[];
+  impactScoreINR: number;
+  travelStreakDays: number;
+  ecoPoints: number;
+  issueDate: string;
+}
+
+export interface Booking {
+  id: string;
+  bookingType: 'experience' | 'homestay' | 'guide' | 'transport';
+  title: string;
+  providerName: string;
+  location: string;
+  date: string;
+  travelers: number;
+  amountINR: number;
+  status: 'Confirmed' | 'Completed' | 'Pending' | 'Cancelled';
+  impactBreakdown: {
+    guide: number;
+    homestay: number;
+    food: number;
+    artisan: number;
+    transport: number;
+    community: number;
+  };
+  qrCode: string;
+  createdAt: string;
 }
 
 export interface Homestay {
@@ -175,6 +251,7 @@ export interface Homestay {
     lat: number;
     lng: number;
   };
+  verifiedBadge: boolean;
 }
 
 export interface LocalDish {
@@ -191,85 +268,151 @@ export interface LocalDish {
   localHost: string;
   image: string;
   isCookingWorkshopAvailable: boolean;
+  spiciness: 'Mild' | 'Medium' | 'Fiery';
 }
 
-export interface Artisan {
+export interface Festival {
   id: string;
   name: string;
-  craftType: string;
+  nativeName?: string;
+  location: string;
+  district: string;
   community: string;
-  village: string;
-  district: string;
-  story: string;
-  materials: string[];
-  products: string[];
-  workshopAvailable: boolean;
-  fairTradeGuarantee: string;
-  image: string;
-}
-
-export interface Trail {
-  id: string;
-  name: string;
-  district: string;
-  distanceKm: number;
-  durationDays: string;
-  difficulty: 'Easy' | 'Moderate' | 'Challenging' | 'Alpine Expedition';
-  maxElevationMeters: number;
-  elevationProfile: { distanceKm: number; elevationMeters: number; label?: string }[];
-  startPoint: string;
-  guideRequirement: 'Mandatory' | 'Recommended' | 'Self-guided allowed';
-  bestSeason: string;
-  waterPoints: string;
-  permits: string;
-  safetyNotes: string[];
-  image: string;
-}
-
-export interface SeasonalMonth {
-  monthIndex: number;
+  month: number;
   monthName: string;
-  seasonTag: string;
-  landscapeDescription: string;
-  weatherCondition: string;
-  temperatureRange: string;
-  floraFauna: string;
-  seasonalFoods: string[];
-  recommendedRegions: string[];
-  travelTip: string;
+  approximateDate: string;
+  status: 'Confirmed' | 'Expected' | 'To be announced';
+  type: 'Tribal Cultural' | 'Harvest / Folk' | 'Spiritual' | 'Arts & Music';
+  culturalMeaning: string;
+  duration: string;
+  travelerExperience: string;
+  etiquette: string[];
+  photographyRule: string;
+  image: string;
 }
 
-export interface LanguagePhrase {
-  id: string;
-  category: 'Greeting' | 'Gratitude' | 'Directions' | 'Hospitality' | 'Market';
-  english: string;
-  hindi: string;
-  tribalLanguage: string;
-  dialect: string;
-  pronunciation: string;
-  audioSimulatedText: string;
-  culturalNote: string;
-}
-
-export interface SavedJournalEntry {
+export interface Story {
   id: string;
   title: string;
-  date: string;
-  location: string;
-  notes: string;
-  mood: string;
-  photoUrl?: string;
-  savedItemIds: string[];
+  subtitle: string;
+  storyteller: string;
+  role: string;
+  village: string;
+  district: string;
+  community: string;
+  readTime: string;
+  audioDuration: string;
+  coverImage: string;
+  ambientSound: 'waterfall' | 'forest' | 'mandar' | 'temple';
+  excerpt: string;
+  content: string[];
+  quote: string;
+  gallery: string[];
 }
 
-export interface ImpactCalculation {
+export interface ItinerarySlot {
+  timeWindow: string;
+  destination: string;
+  activity: string;
+  travelTime: string;
+  approximateCostINR: number;
+  suggestedDuration: string;
+  crowdLevel: TourismLoadLevel;
+  localExperience: string;
+  foodSuggestion: string;
+  safetyNotes: string;
+}
+
+export interface ItineraryDay {
+  dayNumber: number;
+  title: string;
+  theme: string;
+  morning: ItinerarySlot;
+  afternoon: ItinerarySlot;
+  evening: ItinerarySlot;
+  dailyBudgetINR: number;
+  crowdScore: TourismLoadLevel;
+  responsibleTip: string;
+}
+
+export interface AIItineraryPlan {
+  id: string;
+  title: string;
+  destinationRegion: string;
+  daysCount: number;
+  travelGroup: string;
+  interests: string[];
+  totalEstimatedCostINR: number;
+  localEconomicImpactINR: number;
+  days: ItineraryDay[];
+  summaryNote: string;
+  createdAt: string;
+}
+
+export interface AIItineraryRequest {
+  destinationRegion: string;
   days: number;
-  travelers: number;
-  homestayNights: number;
-  guideDays: number;
-  mealsCount: number;
-  totalLocalRetentionINR: number;
-  plasticBottlesAvoidedKg: number;
-  localMultiplierRatio: number;
-  directLivelihoodsCount: number;
+  budgetINR: number;
+  travelGroup: 'Solo' | 'Couple' | 'Family' | 'Friends' | 'Student' | 'Senior';
+  interests: string[];
+  preferredSeason: 'Winter (Oct-Feb)' | 'Monsoon (Jul-Sep)' | 'Summer (Mar-Jun)';
+  crowdPreference: 'Low Crowds (Offbeat)' | 'Balanced' | 'All Highlights';
+  travelStyle: 'Eco-conscious & Community' | 'Balanced Heritage' | 'Adventure & Wilderness';
+  foodPreference: 'Authentic Chhattisgarhi' | 'Vegetarian Only' | 'Tribal Specialties' | 'Any';
+  adventureLevel: 'Gentle' | 'Moderate' | 'High Adventure';
+}
+
+export type UserRole = 'tourist' | 'guide' | 'seller' | 'admin';
+
+export interface UserProfile {
+  id: string;
+  name: string;
+  role: UserRole;
+  email: string;
+  phone: string;
+  location: string;
+  avatar: string;
+  verified: boolean;
+  kycStatus: 'Verified' | 'Pending' | 'Rejected' | 'Not Submitted';
+  bio?: string;
+  rating?: number;
+  earningsINR?: number;
+  completedBookingsCount?: number;
+}
+
+export interface ChatMessage {
+  id: string;
+  sender: 'user' | 'assistant';
+  text: string;
+  language: 'en' | 'hi' | 'ch';
+  timestamp: string;
+  suggestions?: string[];
+}
+
+export interface CommunityChallenge {
+  id: string;
+  title: string;
+  tag: string;
+  description: string;
+  points: number;
+  badgeReward: string;
+  completed: boolean;
+  actionUrl?: string;
+}
+
+export interface VRScene {
+  id: string;
+  title: string;
+  location: string;
+  district: string;
+  panoramaImage: string;
+  ambientSound: 'waterfall' | 'forest' | 'temple';
+  description: string;
+  hotspots: {
+    pitch: number;
+    yaw: number;
+    title: string;
+    text: string;
+    audioCaption?: string;
+  }[];
 }

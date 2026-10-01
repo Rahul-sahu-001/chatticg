@@ -1,165 +1,235 @@
-import React, { useState, useMemo } from 'react';
-import { useJournal } from '../../context/JournalContext';
+import React, { useState, useMemo, useEffect } from 'react';
 import { DESTINATIONS } from '../../data/destinations';
-import { STORIES } from '../../data/stories';
-import { FESTIVALS } from '../../data/festivals';
-import { HOMESTAYS } from '../../data/homestays';
-import { LOCAL_DISHES } from '../../data/foods';
-import { Search, X, MapPin, BookOpen, Flame, Tent, Utensils, ArrowRight } from 'lucide-react';
+import { EXPERIENCES } from '../../data/experiences';
+import { PRODUCTS } from '../../data/products';
+import { Destination } from '../../types';
+import {
+  Search,
+  X,
+  MapPin,
+  Sparkles,
+  ShoppingBag,
+  Compass,
+  ArrowRight,
+  Clock
+} from 'lucide-react';
 
-export const GlobalSearchModal: React.FC<{ onSelectDestination: (dest: any) => void }> = ({ onSelectDestination }) => {
-  const { isSearchOpen, setIsSearchOpen } = useJournal();
+interface Props {
+  isOpen: boolean;
+  onClose: () => void;
+  onSelectDestination: (dest: Destination) => void;
+}
+
+export const GlobalSearchModal: React.FC<Props> = ({
+  isOpen,
+  onClose,
+  onSelectDestination
+}) => {
   const [query, setQuery] = useState('');
+  const [recentSearches, setRecentSearches] = useState<string[]>([
+    'Chitrakote Falls',
+    'Dokra Bell Metal',
+    'Sirpur Temple',
+    'Mainpat Monasteries'
+  ]);
 
-  const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return { destinations: [], stories: [], festivals: [], homestays: [], foods: [] };
+  // Keyboard shortcut Ctrl+K / Cmd+K
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+      }
+      if (e.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
-    return {
-      destinations: DESTINATIONS.filter(d =>
+  const searchResults = useMemo(() => {
+    if (!query.trim()) return { destinations: [], experiences: [], products: [] };
+    const q = query.toLowerCase();
+
+    const matchedDestinations = DESTINATIONS.filter(
+      d =>
         d.name.toLowerCase().includes(q) ||
         d.district.toLowerCase().includes(q) ||
-        d.community.toLowerCase().includes(q) ||
-        d.tags.some(t => t.toLowerCase().includes(q))
-      ),
-      stories: STORIES.filter(s =>
-        s.title.toLowerCase().includes(q) ||
-        s.community.toLowerCase().includes(q) ||
-        s.village.toLowerCase().includes(q)
-      ),
-      festivals: FESTIVALS.filter(f =>
-        f.name.toLowerCase().includes(q) ||
-        f.monthName.toLowerCase().includes(q) ||
-        f.community.toLowerCase().includes(q)
-      ),
-      homestays: HOMESTAYS.filter(h =>
-        h.name.toLowerCase().includes(q) ||
-        h.village.toLowerCase().includes(q) ||
-        h.community.toLowerCase().includes(q)
-      ),
-      foods: LOCAL_DISHES.filter(d =>
-        d.name.toLowerCase().includes(q) ||
-        d.community.toLowerCase().includes(q) ||
-        d.ingredients.some(i => i.toLowerCase().includes(q))
-      )
+        d.category.toLowerCase().includes(q)
+    );
+
+    const matchedExperiences = EXPERIENCES.filter(
+      e =>
+        e.title.toLowerCase().includes(q) ||
+        e.village.toLowerCase().includes(q) ||
+        e.category.toLowerCase().includes(q)
+    );
+
+    const matchedProducts = PRODUCTS.filter(
+      p =>
+        p.name.toLowerCase().includes(q) ||
+        p.craftCategory.toLowerCase().includes(q) ||
+        p.artisanName.toLowerCase().includes(q)
+    );
+
+    return {
+      destinations: matchedDestinations,
+      experiences: matchedExperiences,
+      products: matchedProducts
     };
   }, [query]);
 
-  if (!isSearchOpen) return null;
-
-  const hasAnyResults =
-    results.destinations.length > 0 ||
-    results.stories.length > 0 ||
-    results.festivals.length > 0 ||
-    results.homestays.length > 0 ||
-    results.foods.length > 0;
+  if (!isOpen) return null;
 
   return (
-    <div className='fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-start justify-center p-4 pt-16 sm:pt-24 animate-fade-in'>
-      <div className='relative w-full max-w-2xl bg-[#091824] rounded-3xl border border-white/20 shadow-2xl p-6 sm:p-8 space-y-6 max-h-[80vh] flex flex-col'>
-        {/* Search Bar Input */}
-        <div className='flex items-center gap-3 pb-4 border-b border-white/10'>
-          <Search className='w-5 h-5 text-[#E5A93C]' />
+    <div className='fixed inset-0 z-50 flex items-start justify-center pt-20 p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-150'>
+      <div className='relative w-full max-w-2xl rounded-3xl glass-panel-warm border border-[#E5A93C]/50 bg-[#07131D]/98 text-white shadow-2xl overflow-hidden'>
+        {/* Search Input Bar */}
+        <div className='p-4 sm:p-5 border-b border-white/10 flex items-center gap-3'>
+          <Search className='w-5 h-5 text-[#E5A93C] flex-shrink-0' />
           <input
             type='text'
             autoFocus
             value={query}
             onChange={e => setQuery(e.target.value)}
-            placeholder='Type natural search (e.g. “quiet village”, “March festival”, “Apatani”, “smoked tea”)...'
-            className='w-full bg-transparent border-none outline-none text-base text-white placeholder-gray-400 font-sans'
+            placeholder='Search destinations, Dokra crafts, homestays, waterfalls...'
+            className='w-full bg-transparent border-none outline-none text-sm sm:text-base text-white placeholder-gray-400 font-sans'
           />
-          <button onClick={() => setIsSearchOpen(false)} className='p-1 text-gray-400 hover:text-white'>
-            <X className='w-5 h-5' />
+          {query && (
+            <button
+              onClick={() => setQuery('')}
+              className='p-1 rounded-lg text-gray-400 hover:text-white cursor-pointer'
+            >
+              <X className='w-4 h-4' />
+            </button>
+          )}
+          <button
+            onClick={onClose}
+            className='px-3 py-1 rounded-xl bg-white/10 text-xs font-mono text-gray-300 hover:text-white cursor-pointer'
+          >
+            ESC
           </button>
         </div>
 
-        {/* Results Stream */}
-        <div className='overflow-y-auto no-scrollbar space-y-6 flex-1 pr-2'>
-          {!query.trim() && (
-            <div className='text-xs text-gray-400 space-y-2 font-mono'>
-              <span className='text-[#E5A93C] uppercase block font-semibold'>Popular Explorations:</span>
+        {/* Results Area */}
+        <div className='p-5 max-h-[60vh] overflow-y-auto custom-scrollbar space-y-6'>
+          {/* Recent searches when query is empty */}
+          {!query.trim() ? (
+            <div className='space-y-3'>
+              <span className='font-mono text-xs uppercase text-gray-400 tracking-wider flex items-center gap-1.5'>
+                <Clock className='w-3.5 h-3.5 text-[#E5A93C]' />
+                <span>Suggested & Recent Discoveries</span>
+              </span>
               <div className='flex flex-wrap gap-2'>
-                {['Mechuka', 'Apatani bamboo', 'Seven Lakes', 'Losar in February', 'Thembang Dzong', 'Singpho tea'].map(term => (
+                {recentSearches.map(item => (
                   <button
-                    key={term}
-                    onClick={() => setQuery(term)}
-                    className='px-3 py-1 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition-colors'
+                    key={item}
+                    onClick={() => setQuery(item)}
+                    className='px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/15 text-xs text-gray-300 hover:text-white border border-white/10 transition-colors cursor-pointer'
                   >
-                    {term}
+                    {item}
                   </button>
                 ))}
               </div>
             </div>
-          )}
-
-          {/* Destinations matches */}
-          {results.destinations.length > 0 && (
-            <div className='space-y-2'>
-              <span className='font-mono text-[10px] text-[#E5A93C] uppercase font-bold flex items-center gap-1.5'>
-                <MapPin className='w-3.5 h-3.5' /> Destinations & Villages ({results.destinations.length})
-              </span>
-              <div className='space-y-1.5'>
-                {results.destinations.map(d => (
-                  <div
-                    key={d.id}
-                    onClick={() => {
-                      setIsSearchOpen(false);
-                      onSelectDestination(d);
-                    }}
-                    className='p-3 rounded-xl bg-white/5 hover:bg-white/10 flex items-center justify-between cursor-pointer group transition-colors'
-                  >
-                    <div>
-                      <h5 className='font-serif text-base text-white group-hover:text-[#F3BA54]'>{d.name}</h5>
-                      <p className='text-[11px] text-gray-400 font-mono'>{d.district} • {d.community} Tribe • {d.altitude}</p>
-                    </div>
-                    <ArrowRight className='w-4 h-4 text-gray-400 group-hover:text-[#E5A93C] transition-colors' />
+          ) : (
+            <>
+              {/* Destinations Matches */}
+              {searchResults.destinations.length > 0 && (
+                <div className='space-y-2'>
+                  <span className='font-mono text-xs uppercase text-[#E5A93C] tracking-wider block font-bold'>
+                    Destinations ({searchResults.destinations.length})
+                  </span>
+                  <div className='space-y-1.5'>
+                    {searchResults.destinations.map(dest => (
+                      <div
+                        key={dest.id}
+                        onClick={() => {
+                          onSelectDestination(dest);
+                          onClose();
+                        }}
+                        className='p-3 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-[#E5A93C]/40 flex items-center justify-between transition-all cursor-pointer'
+                      >
+                        <div className='flex items-center gap-3'>
+                          <img
+                            src={dest.images[0]}
+                            alt={dest.name}
+                            className='w-10 h-10 rounded-xl object-cover'
+                          />
+                          <div>
+                            <span className='font-serif text-base font-bold text-white block'>{dest.name}</span>
+                            <span className='text-xs text-gray-400 font-mono'>
+                              {dest.district} • {dest.tourismLoad} Load
+                            </span>
+                          </div>
+                        </div>
+                        <ArrowRight className='w-4 h-4 text-gray-400' />
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
+                </div>
+              )}
 
-          {/* Stories matches */}
-          {results.stories.length > 0 && (
-            <div className='space-y-2'>
-              <span className='font-mono text-[10px] text-[#C2593F] uppercase font-bold flex items-center gap-1.5'>
-                <BookOpen className='w-3.5 h-3.5' /> Mountain Folklore & Stories ({results.stories.length})
-              </span>
-              <div className='space-y-1.5'>
-                {results.stories.map(s => (
-                  <div key={s.id} className='p-3 rounded-xl bg-white/5 text-xs text-gray-300'>
-                    <div className='font-serif text-white font-medium text-sm'>{s.title}</div>
-                    <div className='text-[11px] text-gray-400 font-mono'>Storyteller: {s.storyteller} ({s.village})</div>
+              {/* Experiences Matches */}
+              {searchResults.experiences.length > 0 && (
+                <div className='space-y-2'>
+                  <span className='font-mono text-xs uppercase text-emerald-400 tracking-wider block font-bold'>
+                    Experiences ({searchResults.experiences.length})
+                  </span>
+                  <div className='space-y-1.5'>
+                    {searchResults.experiences.map(exp => (
+                      <div
+                        key={exp.id}
+                        onClick={onClose}
+                        className='p-3 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/5 flex items-center justify-between transition-all cursor-pointer'
+                      >
+                        <div>
+                          <span className='font-serif text-sm font-bold text-white block'>{exp.title}</span>
+                          <span className='text-xs text-gray-400 font-mono'>
+                            Host: {exp.hostName} • ₹{exp.priceINR}
+                          </span>
+                        </div>
+                        <span className='text-xs text-[#E5A93C] font-mono'>Book</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
+                </div>
+              )}
 
-          {/* Festivals matches */}
-          {results.festivals.length > 0 && (
-            <div className='space-y-2'>
-              <span className='font-mono text-[10px] text-[#F3BA54] uppercase font-bold flex items-center gap-1.5'>
-                <Flame className='w-3.5 h-3.5' /> Living Festivals ({results.festivals.length})
-              </span>
-              <div className='space-y-1.5'>
-                {results.festivals.map(f => (
-                  <div key={f.id} className='p-3 rounded-xl bg-white/5 flex items-center justify-between text-xs'>
-                    <div>
-                      <div className='font-serif text-white font-medium text-sm'>{f.name}</div>
-                      <div className='text-[11px] text-gray-400 font-mono'>{f.monthName} • {f.community} Community</div>
-                    </div>
-                    <span className='px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-mono'>{f.status}</span>
+              {/* Products Matches */}
+              {searchResults.products.length > 0 && (
+                <div className='space-y-2'>
+                  <span className='font-mono text-xs uppercase text-[#F3BA54] tracking-wider block font-bold'>
+                    Marketplace Crafts ({searchResults.products.length})
+                  </span>
+                  <div className='space-y-1.5'>
+                    {searchResults.products.map(prod => (
+                      <div
+                        key={prod.id}
+                        onClick={onClose}
+                        className='p-3 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/5 flex items-center justify-between transition-all cursor-pointer'
+                      >
+                        <div>
+                          <span className='font-serif text-sm font-bold text-white block'>{prod.name}</span>
+                          <span className='text-xs text-gray-400 font-mono'>
+                            ₹{prod.priceINR} • {prod.artisanName}
+                          </span>
+                        </div>
+                        <span className='text-xs text-emerald-400 font-mono'>View 3D</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
+                </div>
+              )}
 
-          {query && !hasAnyResults && (
-            <div className='text-center py-8 text-gray-400 text-xs font-light'>
-              No matches found for “{query}”. Try searching for a tribe name like “Monpa” or a valley like “Mechuka”.
-            </div>
+              {searchResults.destinations.length === 0 &&
+                searchResults.experiences.length === 0 &&
+                searchResults.products.length === 0 && (
+                  <div className='py-8 text-center text-xs text-gray-400 font-mono'>
+                    No direct matches for "{query}". Try searching "Bastar", "Chitrakote", "Dokra", or "Caves".
+                  </div>
+                )}
+            </>
           )}
         </div>
       </div>

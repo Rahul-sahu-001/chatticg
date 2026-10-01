@@ -2,211 +2,192 @@ import { DistrictInfo } from '../types';
 
 export const DISTRICTS: DistrictInfo[] = [
   {
-    id: 'shi-yomi',
-    name: 'Shi-Yomi',
-    headquarters: 'Tato',
-    zone: 'Siang Belt',
-    tagline: 'High alpine bowls, sacred caves & the wild Yargap Chu canyon.',
-    elevationRange: '1,200 m to 4,800 m',
+    id: 'bastar',
+    name: 'Bastar',
+    headquarters: 'Jagdalpur',
+    zone: 'Southern Bastar Plateau',
+    tagline: 'Heartland of Tribal Art, Roaring Waterfalls & Deep Sal Wilderness',
+    elevationRange: '1,800 - 2,800 ft',
     nature: {
-      mountains: ['Menchukha Holy Peak', 'Dorjeeling Range', 'Gompa Ridge'],
-      rivers: ['Yargap Chu', 'Siyom River'],
-      waterfalls: ['Dorjeeling Fall', 'Lura Cascade'],
-      forests: ['Sub-alpine conifers', 'Rhododendron scrub', 'Temperate pine valleys'],
-      wildlife: ['Himalayan Black Bear', 'Red Panda', 'Wild Mountain Horses', 'Musk Deer']
+      waterfalls: ['Chitrakote Falls', 'Tirathgarh Falls', 'Tamda Ghumar', 'Mendri Ghumar', 'Kanger Dhara'],
+      forests: ['Kanger Valley National Park', 'Machkot Sal Forest'],
+      wildlife: ['Bastar Hill Myna (State Bird)', 'Indian Gaur', 'Leopards', 'Barking Deer'],
+      rivers: ['Indravati River', 'Kanger River', 'Shabari River'],
+      caves: ['Kutumsar Cave', 'Kailash Cave', 'Dandak Cave']
     },
     culture: {
-      tribes: ['Memba', 'Ramo', 'Pai-Libo'],
-      architecture: 'Timber post-and-beam homes with hand-split wooden shingle roofs weighted down by river stones.',
-      clothing: 'Chhuba (thick wool coats with silk sashes), felt boots, turquoise and coral head-ornaments.',
-      crafts: ['Tibetan carpet weaving', 'Wood carving', 'Bamboo butter churners (Dongmo)'],
-      musicDances: ['Ache Lhamo opera traditions', 'Losar celebratory circle dances', 'Ramo ancestral folk hymns']
+      tribes: ['Muria', 'Maria', 'Dhurwa', 'Bhatra', 'Halba'],
+      crafts: ['Dokra Lost-Wax Bell Metal', 'Bastar Iron Craft (Loha Shilp)', 'Wood Carving', 'Sisal Craft'],
+      architecture: 'Devgudi sacred shrines, Ghotul youth dormitories, terracotta roofed earth homes',
+      musicDances: ['Gaur Maria dance (Bison-horn)', 'Karma dance', 'Kaksar dance', 'Hulki dance']
     },
     experiences: [
-      { title: 'Monastery Meditation', category: 'Spiritual', description: 'Early morning butter lamp lighting at 400-year-old Samden Yongcha Monastery.' },
-      { title: 'Yargap Chu Rafting', category: 'Adventure', description: 'Grade III-IV whitewater exploration through high mountain granite gorges.' },
-      { title: 'Pastoral Village Walk', category: 'Culture', description: 'Spend twilight grazing wild ponies with Memba shepherd elders.' }
+      {
+        title: 'Bastar Haat & Weekly Tribal Bazaar',
+        category: 'Culture',
+        description: 'Immerse in centuries-old barter trade, local vegetables, Mahua spirit, and Dokra metalwork.'
+      },
+      {
+        title: 'Chitrakote Twilight Boat Safari',
+        category: 'Adventure',
+        description: 'Row into the misty spray of India’s widest horseshoe waterfall with local Gond boatmen.'
+      }
     ],
     food: [
-      { dish: 'Memba Momos with Yak Chhurpi', description: 'Fresh steamed parcels filled with fermented yak cheese and wild mountain chives.', ingredients: ['Yak cheese', 'Wheat flour', 'Mountain chives', 'Sichuan pepper'] },
-      { dish: 'Suja & Tsampa', description: 'Churned salted butter tea paired with slow-roasted highland barley flour.', ingredients: ['Butter', 'Tea leaves', 'Himalayan rock salt', 'Barley'] }
+      {
+        dish: 'Amat',
+        description: 'Bamboo shoot and mixed forest vegetable slow-simmered stew.',
+        ingredients: ['Bamboo Shoots', 'Pehj', 'Mustard seeds']
+      },
+      {
+        dish: 'Chila with Tomato Chutney',
+        description: 'Fermented crispy rice crepe with wood-charred spicy tomato salsa.',
+        ingredients: ['Rice Flour', 'Urad dal', 'Field tomatoes']
+      }
     ],
     festivals: [
-      { name: 'Losar', month: 'February / March', community: 'Memba', description: 'Tibetan-Buddhist New Year celebrated with masked cham dances, prayer flag hoisting, and family feasts.' }
+      {
+        name: 'Bastar Dussehra',
+        month: 'October',
+        community: 'All Bastar Tribes & Royal Lineage',
+        description: '75-day world-record festival honoring Goddess Danteshwari with giant hand-pulled chariots.'
+      },
+      {
+        name: 'Goncha Festival',
+        month: 'July',
+        community: 'Tribal communities',
+        description: 'Unique chariot procession where devotees use bamboo pistols (Tupki) with Peng seeds.'
+      }
     ],
-    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    id: 'lower-subansiri',
-    name: 'Lower Subansiri (Ziro Valley)',
-    headquarters: 'Ziro',
-    zone: 'Central',
-    tagline: 'UNESCO-nominated wetland agro-ecology, living bamboo architecture & Apatani wisdom.',
-    elevationRange: '1,500 m to 2,400 m',
+    id: 'mahasamund',
+    name: 'Mahasamund (Sirpur)',
+    headquarters: 'Mahasamund',
+    zone: 'Central Plains',
+    tagline: 'Ancient Buddhist & Hindu Capital of South Kosala on the Mahanadi',
+    elevationRange: '800 - 1,200 ft',
     nature: {
-      mountains: ['Talley Range', 'Kardo Shivalinga Ridge', 'Ziro Plateau Rim'],
-      rivers: ['Kele River', 'Subansiri Tributaries'],
-      waterfalls: ['Pange Cascades', 'Talley Gorge Falls'],
-      forests: ['Pleioblastus simonii bamboo groves', 'Blue Pine (Pinus wallichiana) woods', 'Temperate cloud forests'],
-      wildlife: ['Clouded Leopard', 'Malayan Giant Squirrel', 'Bugun Liocichla', 'Himalayan Salamander']
+      waterfalls: [],
+      forests: ['Barnawapara Wildlife Buffer', 'Sirpur Mahanadi Riparian Groves'],
+      wildlife: ['Spotted Deer', 'Wild Boar', 'Kingfishers', 'River Terns'],
+      rivers: ['Mahanadi River', 'Jonk River']
     },
     culture: {
-      tribes: ['Apatani'],
-      architecture: 'Elevated timber and woven bamboo houses built with rat-proof columns and communal front verandas (Lapang).',
-      clothing: 'Jigiro handwoven shawls with black, red and white geometric patterns; traditional cane nose plugs (Yaping Hullo).',
-      crafts: ['Apatani loin-loom weaving', 'Intricate bamboo basketry (Sopo)', 'Cane smoking pipes'],
-      musicDances: ['Daminda celebratory song dances', 'Pakhu-Itu festival dances', 'Donyi-Polo invocations']
+      tribes: ['Kamar', 'Gond', 'Kanwar'],
+      crafts: ['Terracotta Pottery', 'Red Brick Carving', 'Stone Inlay'],
+      architecture: '7th-century brick temples, Buddhist monastic viharas, underground markets',
+      musicDances: ['Panthi dance', 'Raut Nacha', 'Sua dance']
     },
     experiences: [
-      { title: 'Agro-Ecology Masterclass', category: 'Farming', description: 'Walk the bunds of Hong village to study traditional integrated fish-paddy hydrology.' },
-      { title: 'Talley Valley Trek', category: 'Wilderness', description: 'Expedition into the virgin bamboo and fir sanctum of the clouded leopard.' },
-      { title: 'Loin Loom Weaving', category: 'Craft', description: 'Sit on bamboo floorboards with master weavers crafting ceremonial shawls.' }
+      {
+        title: 'Sirpur Archaeological Excavation Walk',
+        category: 'Heritage',
+        description: 'Walk through 80+ excavated monuments from the 5th to 8th century AD.'
+      }
     ],
     food: [
-      { dish: 'Pika Pila', description: 'Traditional Apatani pickle of fermented bamboo shoot, dried mountain pork fat, and king chili.', ingredients: ['Bamboo shoot', 'Pork fat', 'Bhut jolokia', 'Native salt'] },
-      { dish: 'Dung Po', description: 'Steamed red rice encased inside aromatic wild Phrynium leaves.', ingredients: ['Red hill rice', 'Wild aromatic leaf', 'Spring water'] }
+      {
+        dish: 'Chhattisgarhi 7-Bhaji Thali',
+        description: 'Seven seasonal wild leafy greens cooked with garlic and dried red chilies.',
+        ingredients: ['Chech Bhaji', 'Kanda Bhaji', 'Mustard oil']
+      }
     ],
     festivals: [
-      { name: 'Myoko', month: 'March (20-30)', community: 'Apatani', description: 'Month-long spring festival of communal bonding, fertility rites, and inter-village alliance forging.' },
-      { name: 'Dree', month: 'July (5)', community: 'Apatani', description: 'Major agricultural festival praying for bountiful crop harvest and insect protection.' }
+      {
+        name: 'Sirpur National Dance Festival',
+        month: 'January',
+        community: 'Classical and folk artists',
+        description: 'Nighttime cultural festival in front of the illuminated Lakshmana Temple.'
+      }
     ],
-    heroImage: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    id: 'dibang-valley',
-    name: 'Dibang Valley',
-    headquarters: 'Anini',
-    zone: 'Eastern',
-    tagline: 'The kingdom of shifting mists, sacred animist taboos & glacial high tarns.',
-    elevationRange: '1,000 m to 5,200 m',
+    id: 'surguja',
+    name: 'Surguja (Mainpat)',
+    headquarters: 'Ambikapur',
+    zone: 'Northern Highlands',
+    tagline: 'Misty Tibetan Monasteries, Bouncing Marshes & Ancient Ramgarh Caves',
+    elevationRange: '2,000 - 3,800 ft',
     nature: {
-      mountains: ['Mishmi Hills High Crest', 'Kalon Glacial Peak', 'Mayodia Ridge'],
-      rivers: ['Dri River', 'Mathun River', 'Talon River'],
-      waterfalls: ['Mipi Cascades', 'Kahii Falls'],
-      forests: ['Pristine subtropical rainforest', 'High rhododendron alpine meadows'],
-      wildlife: ['Mishmi Takin', 'Snow Leopard', 'Hoolock Gibbon', 'Goral', 'Tiger (Sacred sibling)']
+      waterfalls: ['Tiger Point', 'Fish Point', 'Zalzal Waterfalls'],
+      forests: ['Mainpat Pine & Sal Hills', 'Ramgarh Hills'],
+      wildlife: ['Barking Deer', 'Flying Squirrel', 'Hill Partridges'],
+      rivers: ['Rihand River', 'Mand River']
     },
     culture: {
-      tribes: ['Idu Mishmi'],
-      architecture: 'Long single-corridor stilted wood houses with bamboo mesh walls, thatched cane roofs, and open smoking hearths.',
-      clothing: 'Elaborate diamond-loomed coats, tiger-pattern woven bags, cane helmets with bear-hair fringes.',
-      crafts: ['Intricate diamond-warp handloom', 'Cane knapsacks (Ta-ro)', 'Sacred shamanic drums'],
-      musicDances: ['Igu Shaman spirit dances', 'Yu-traditional harvest chanting', 'War-drum invocations']
+      tribes: ['Oraon', 'Korwa', 'Pando', 'Tibetan Exiles'],
+      crafts: ['Tibetan Hand-Knotted Carpets', 'Bamboo Basketry', 'Godna Art'],
+      architecture: 'Tibetan wooden monasteries with gold finials, tribal mud houses with painted murals',
+      musicDances: ['Sarhul dance', 'Karma dance of Surguja', 'Tibetan Cham mask dance']
     },
     experiences: [
-      { title: 'Seven Lakes Trek', category: 'Expedition', description: 'Trek past high glacial lakes perched above 13,000 ft in the misty Mishmi hills.' },
-      { title: 'Night with the Igu Shaman', category: 'Spiritual', description: 'Listen to ancestral origin ballads under the light of pinewood hearth fires.' },
-      { title: 'Dri Valley Wildlife Safari', category: 'Nature', description: 'Spot rare Mishmi takins foraging on steep river bluffs.' }
+      {
+        title: 'Ulta Pani & Jaljali Phenomenon Tour',
+        category: 'Adventure',
+        description: 'Witness water flowing uphill against gravity and jump on bouncy vibrating marshland.'
+      }
     ],
     food: [
-      { dish: 'Idu Smoked Pork with Nettle', description: 'Hearth-cured pork braised with wild stinging nettle and bird chili.', ingredients: ['Smoked pork', 'Wild stinging nettle', 'Bird chili', 'Ginger'] },
-      { dish: 'Yu (Millet Wine)', description: 'Traditional cloudy fermented brew offered to spirits and honored guests.', ingredients: ['Fermented finger millet', 'Natural yeast cake'] }
+      {
+        dish: 'Tibetan Butter Tea & Momos',
+        description: 'Warm salty yak-butter tea paired with steamed vegetable dumplings in misty hills.',
+        ingredients: ['Butter', 'Tea leaves', 'Steamed flour dough']
+      }
     ],
     festivals: [
-      { name: 'Reh', month: 'February (1-3)', community: 'Idu Mishmi', description: 'Grand multi-day celebration of prosperity, community feast, and shamanic healing rituals.' }
-    ],
-    heroImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    id: 'west-kameng',
-    name: 'West Kameng',
-    headquarters: 'Bomdila',
-    zone: 'Western',
-    tagline: 'Ancient fortified dzongs, apple highlands, red panda sanctuaries & Monpa stone architecture.',
-    elevationRange: '800 m to 4,500 m',
-    nature: {
-      mountains: ['Sela Range foothills', 'Eagle Nest Ridge', 'Bomdila Massif'],
-      rivers: ['Kameng River', 'Dirang River', 'Tenga River'],
-      waterfalls: ['Bap Teng Kang Fall', 'Chug Cascade'],
-      forests: ['Temperate oak-conifer forests', 'Subtropical evergreen foothill jungles'],
-      wildlife: ['Red Panda', 'Bugun Liocichla', 'Clouded Leopard', 'Himalayan Monal']
-    },
-    culture: {
-      tribes: ['Monpa', 'Sherdukpen', 'Miji (Sajolang)', 'Hrusso (Aka)'],
-      architecture: 'Fortified stone masonry houses with double-thick granite blocks, carved timber windows, and Buddhist altars.',
-      clothing: 'Thick maroon wool coats, hand-spun yak hair hats, embroidered knee-high Monpa boots.',
-      crafts: ['Traditional wood-mask carving', 'Daphne bush handmade paper', 'Carved wooden tea bowls'],
-      musicDances: ['Torgya cham masked dances', 'Yak dance', 'Sherdukpen harvest dances']
-    },
-    experiences: [
-      { title: 'Thembang Heritage Walk', category: 'History', description: 'Trace the defensive walls and gates of the 12th century Monpa fortified citadel.' },
-      { title: 'Eaglenest Birding Sanctuary', category: 'Birding', description: 'Seek out the elusive Bugun Liocichla in high bamboo moss canopies.' },
-      { title: 'Orchard Homestay Harvest', category: 'Agro', description: 'Pluck organic crisp apples and kiwi in family orchards of Dirang and Shergaon.' }
-    ],
-    food: [
-      { dish: 'Zan with Gundruk', description: 'Finger millet porridge served with tangy fermented mountain green broth.', ingredients: ['Finger millet', 'Gundruk greens', 'Dried chili', 'Butter'] },
-      { dish: 'Khura Pancakes', description: 'Crisp savory buckwheat pancakes fried on stone hearth griddles.', ingredients: ['Buckwheat flour', 'Egg', 'Mountain spring water'] }
-    ],
-    festivals: [
-      { name: 'Losar', month: 'February', community: 'Monpa', description: 'Grand celebration of the New Year with butter sculptures and family gatherings.' }
+      {
+        name: 'Losar (Tibetan New Year)',
+        month: 'February',
+        community: 'Tibetan community',
+        description: 'Colorful prayer flags, ritual cham dances, and community butter sculptures.'
+      }
     ],
     heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    id: 'anjaw',
-    name: 'Anjaw (Eastern Dawn Frontier)',
-    headquarters: 'Hawai',
-    zone: 'Eastern',
-    tagline: 'First sunrise of India, dramatic Lohit gorges & ancient Meyor trans-Himalayan pathways.',
-    elevationRange: '600 m to 4,500 m',
+    id: 'kabirdham',
+    name: 'Kabirdham (Kawardha)',
+    headquarters: 'Kawardha',
+    zone: 'Central Plains',
+    tagline: 'Maikal Foothills, Baiga Medicine Traditions & Bhoramdeo Temple',
+    elevationRange: '1,100 - 2,500 ft',
     nature: {
-      mountains: ['Dong Crest', 'Kaho Ridge', 'Ghat Peak'],
-      rivers: ['Lohit River', 'Dichu River'],
-      waterfalls: ['Hawai Gorge Cascades', 'Tilam Waters'],
-      forests: ['Pinus roxburghii pine terraces', 'Alpine scrub'],
-      wildlife: ['Musk Deer', 'Snow Leopard', 'Himalayan Serow', 'Golden Mahseer']
+      waterfalls: ['Rani Dah Waterfall', 'Chilphi Ghati Cascades'],
+      forests: ['Maikal Ridge Forests', 'Kanha-Achanakmar Wildlife Corridor'],
+      wildlife: ['Tigers (corridor)', 'Leopards', 'Chital', 'Indian Pangolin'],
+      rivers: ['Sankari River', 'Phen River']
     },
     culture: {
-      tribes: ['Meyor', 'Digaru Mishmi', 'Miju Mishmi'],
-      architecture: 'Timber-frame homes with stone foundations, raised pinewood verandas, and slate hearths.',
-      clothing: 'Fine woven tribal shawls, silver ear-plugs, brass beaded bands.',
-      crafts: ['Lohit river pebble carving', 'Pine resin torches', 'Handspun wool blankets'],
-      musicDances: ['Tamladu circle dances', 'Meyor flute melodies']
+      tribes: ['Baiga (Particularly Vulnerable Tribal Group)', 'Gond'],
+      crafts: ['Baiga Herbal Medicine', 'Bamboo Flutes', 'Tattoo (Godna) Body Art'],
+      architecture: 'Nagara stone temples with intricate erotic and deity friezes',
+      musicDances: ['Baiga Pardhauni dance', 'Karma Baiga rhythm', 'Dadariya song']
     },
     experiences: [
-      { title: 'First Light Trek at Dong', category: 'Trek', description: 'Night ascent to stand under the first rays of morning light illuminating the country.' },
-      { title: 'Walong Memorial & Hot Springs', category: 'History', description: 'Pay homage at Walong War Memorial and soak in mountain thermal sulfur springs.' },
-      { title: 'Kaho Border Village Visit', category: 'Culture', description: 'Discover life at India’s very first village on the eastern international boundary.' }
+      {
+        title: 'Bhoramdeo 1,000-Year Stone Architecture Trail',
+        category: 'Heritage',
+        description: 'Explore the Nagwanshi stone temples framed against the green Maikal hills.'
+      }
     ],
     food: [
-      { dish: 'Smoked Lohit River Fish', description: 'River catch slow-smoked over dry pine cones and served with garlic chili dip.', ingredients: ['Fresh river fish', 'Pine smoke', 'Wild mountain garlic', 'Chili'] }
+      {
+        dish: 'Bafauri',
+        description: 'Zero-oil steamed chana dal dumplings spiced with mountain herbs.',
+        ingredients: ['Chana dal', 'Ginger', 'Green chilies']
+      }
     ],
     festivals: [
-      { name: 'Tamladu', month: 'February (15)', community: 'Digaru Mishmi', description: 'Supplication to the Earth God to safeguard human health, cattle, and crops.' }
+      {
+        name: 'Bhoramdeo Mahotsav',
+        month: 'March',
+        community: 'Baiga, Gond, cultural artists',
+        description: 'Festive spring gathering celebrating temple heritage and tribal dances.'
+      }
     ],
-    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    id: 'upper-siang',
-    name: 'Upper Siang',
-    headquarters: 'Yingkiong',
-    zone: 'Siang Belt',
-    tagline: 'The Great Tsangpo gorge entry, cane hanging bridges & sacred Pema Kod hidden realms.',
-    elevationRange: '800 m to 4,200 m',
-    nature: {
-      mountains: ['Dewakota Range', 'Pemako Sacred Ridges'],
-      rivers: ['Siang River (Yarlung Tsangpo)', 'Yamne River'],
-      waterfalls: ['Danba Falls', 'Gelling Cascades'],
-      forests: ['Dense tropical evergreen to temperate fir canopies'],
-      wildlife: ['Tiger', 'Golden Cat', 'Great Hornbill', 'White-winged Wood Duck']
-    },
-    culture: {
-      tribes: ['Adi (Minyong, Padam, Shimong)', 'Memba', 'Khamba'],
-      architecture: 'Stilt houses with bamboo split flooring and legendary 200m cane-and-bamboo suspension bridges.',
-      clothing: 'Gale wrap skirts with intricate black-and-red chevron patterns; heavy brass bead necklaces.',
-      crafts: ['Cane suspension bridge engineering', 'Adi brass bell casting', 'Bamboo quivers'],
-      musicDances: ['Solung Ponung narrative dances', 'Delong ritual dances', 'Tapun wind music']
-    },
-    experiences: [
-      { title: 'Cross the Siang Cane Bridge', category: 'Adventure', description: 'Walk across a swaying 150m traditional cane suspension bridge above turquoise whitewater.' },
-      { title: 'Adi Village Fireside Lore', category: 'Storytelling', description: 'Listen to village elders recount the epic oral genealogies of Abotani.' }
-    ],
-    food: [
-      { dish: 'Lukter with Bird Chili', description: 'Shredded smoked beef and pork tossed with blazing bird’s eye chili and bamboo shoot.', ingredients: ['Smoked beef', 'Bird chili', 'Bamboo shoot', 'Ginger'] }
-    ],
-    festivals: [
-      { name: 'Solung', month: 'September (1-3)', community: 'Adi', description: 'Principal agricultural socio-religious festival celebrating prosperity and divine protection.' }
-    ],
-    heroImage: 'https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1609137144822-44676100c5c4?auto=format&fit=crop&w=1200&q=80'
   }
 ];
